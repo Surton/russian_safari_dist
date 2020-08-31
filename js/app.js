@@ -140,7 +140,6 @@ function initClamp() {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
       var el = _step2.value;
       var attribute = el.getAttribute('clamp');
-      console.log(attribute);
       $clamp(el, {
         clamp: attribute,
         useNativeClamp: false,

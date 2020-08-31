@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Главная страница</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="preload" href="./css/libs.min.css" as="style">
+<link rel="preload" href="./css/app.css" as="style">
+<link rel="stylesheet" href="./css/libs.min.css">
+<link rel="stylesheet" href="./css/app.css">
+<script defer="" src="./js/libs.min.js"></script>
+
+</head>
+<body>
+  <header sticky="" class="app-header">
+  <div class="wrapper">
+    <div class="app-header__container">
+      <a href="/" class="app-header-logo">
+        <img src="./img/logo-multiline.svg" class="app-header-logo__image app-header-logo__image--multiline">
+        <img src="./img/logo-singleline.svg" class="app-header-logo__image app-header-logo__image--singleline">
+      </a>
+      <div class="app-header-content">
+        <div class="app-header-content__item">
+          <nav class="app-header-menu app-header-menu--top">
+            
+              
+                <button header-dropdown-template="our-equipment" class="app-header__link app-header-menu__item">
+                  <span>Наша техника</span>
+                  <svg class="app-header-menu__item-icon">
+                    <use xlink:href="./img/sprite.svg#arrow-dropdown"></use>
+                  </svg>
+                </button>
+                <div style="display: none;">
+                  <div id="our-equipment">
+                    <ul class="app-header-dropdown">
+                      
+                        <li class="app-header-dropdown__item">
+                          <a href="#" class="app-header-dropdown__link">
+                            <img src="img/mocks/equipments/equipment.jpg" alt="БТР-80" class="app-header-dropdown__image">
+                            <span class="app-header-dropdown__label">БТР-80</span>
+                            <svg class="app-header-dropdown__arrow">
+                              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      
+                        <li class="app-header-dropdown__item">
+                          <a href="#" class="app-header-dropdown__link">
+                            <img src="img/mocks/equipments/equipment-1.jpg" alt="Танк Т-55" class="app-header-dropdown__image">
+                            <span class="app-header-dropdown__label">Танк Т-55</span>
+                            <svg class="app-header-dropdown__arrow">
+                              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      
+                        <li class="app-header-dropdown__item">
+                          <a href="#" class="app-header-dropdown__link">
+                            <img src="img/mocks/equipments/equipment-2.jpg" alt="Танк Т-34" class="app-header-dropdown__image">
+                            <span class="app-header-dropdown__label">Танк Т-34</span>
+                            <svg class="app-header-dropdown__arrow">
+                              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      
+                        <li class="app-header-dropdown__item">
+                          <a href="#" class="app-header-dropdown__link">
+                            <img src="img/mocks/equipments/equipment-3.jpg" alt="БМП-2" class="app-header-dropdown__image">
+                            <span class="app-header-dropdown__label">БМП-2</span>
+                            <svg class="app-header-dropdown__arrow">
+                              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      
+                        <li class="app-header-dropdown__item">
+                          <a href="#" class="app-header-dropdown__link">
+                            <img src="img/mocks/equipments/equipment-4.jpg" alt="БРДМ-2" class="app-header-dropdown__image">
+                            <span class="app-header-dropdown__label">БРДМ-2</span>
+                            <svg class="app-header-dropdown__arrow">
+                              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              
+              
+                <a href="#" class="app-header__link app-header-menu__item">Подарочные сертификаты</a>
+              
+              
+                <a href="#" class="app-header__link app-header-menu__item">Корпоративы</a>
+              
+          </nav>
+          <div class="app-header__separator"></div>
+          <div class="app-phone">
+  <a href="tel:+74952205110" class="app-phone__call app-phone__item">
+    <svg class="app-phone__icon">
+      <use xlink:href="./img/sprite.svg#call"></use>
+    </svg>
+  </a>
+  <a href="tel:+74952205110" class="app-phone__number app-phone__item">+7 495 220-5-110</a>
+  
+    <a href="#" class="app-phone__link app-phone__item">Позвоните мне</a>
+  </div>
+          <button header-switcher="" class="app-header-switcher">
+            <svg class="app-header-switcher__icon">
+              <use xlink:href="./img/sprite.svg#menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="app-header-content__item">
+          <nav class="app-header-menu app-header-menu--bottom">
+            
+              <a href="#" class="app-header__link app-header-menu__item">О нас</a>
+            
+              <a href="#" class="app-header__link app-header-menu__item">Отзывы</a>
+            
+              <a href="#" class="app-header__link app-header-menu__item">Галерея</a>
+            
+              <a href="#" class="app-header__link app-header-menu__item">Статьи</a>
+            
+              <a href="#" class="app-header__link app-header-menu__item">Вопросы и ответы</a>
+            
+              <a href="#" class="app-header__link app-header-menu__item">Адреса и контакты</a>
+            
+          </nav>
+          <div class="app-header__separator"></div>
+          <button data-template="language-menu" class="language">
+  <svg class="language__icon">
+    <use xlink:href="./img/sprite.svg#language"></use>
+  </svg>
+  <span href="#" class="language__current">Русский</span>
+  <span class="language__description">(ru)</span>
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<header app-header-mobile="" class="app-header-mobile">
+  <div class="app-header-mobile__header">
+    <a href="/" class="app-header-mobile-logo">
+      <img src="./img/logo-singleline.svg" class="app-header-mobile-logo__image">
+    </a>
+    <div class="app-header__separator"></div>
+    <button header-switcher="" class="app-header-switcher">
+      <svg class="app-header-switcher__icon">
+        <use xlink:href="./img/sprite.svg#clear"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="app-header-mobile__main">
+    <div class="app-header-mobile-additional app-header-mobile__margin">
+      <div class="app-header-mobile-additional__item">
+        <div class="app-phone">
+  <a href="tel:+74952205110" class="app-phone__call app-phone__item">
+    <svg class="app-phone__icon">
+      <use xlink:href="./img/sprite.svg#call"></use>
+    </svg>
+  </a>
+  <a href="tel:+74952205110" class="app-phone__number app-phone__item">+7 495 220-5-110</a>
+  
+    <a href="#" class="app-phone__link app-phone__item">Позвоните мне</a>
+  </div>
+      </div>
+      <div class="app-header-mobile-additional__item">
+        <div class="app-contact">
+  <svg class="app-contact__icon app-contact__item">
+    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+  </svg>
+  <a href="#" class="app-contact__link app-link app-link--white">WhatsApp</a>
+</div>
+      </div>
+      <div class="app-header-mobile-additional__item">
+        <button data-template="language-menu" class="language">
+  <svg class="language__icon">
+    <use xlink:href="./img/sprite.svg#language"></use>
+  </svg>
+  <span href="#" class="language__current">Русский</span>
+  <span class="language__description">(ru)</span>
+</button>
+      </div>
+    </div>
+    <div class="app-header-mobile-menu app-header-mobile-menu--big app-header-mobile__margin">
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Наша техника</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Подарочные сертификаты</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Корпоративы</a>
+        </div>
+      
+    </div>
+    <div class="app-header-mobile-menu app-header-mobile__margin">
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">О нас</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Отзывы</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Галерея</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Статьи</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Вопросы и ответы</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Адреса и контакты</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Использовать сертификат</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Стрельбы</a>
+        </div>
+      
+        <div class="app-header-mobile-menu__item">
+          <a href="#" class="app-header-mobile-menu__link">Полевая кухня</a>
+        </div>
+      
+    </div>
+    <div class="app-header-mobile__margin">
+      <div class="app-social">
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#vk"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  
+</div>
+    </div>
+  </div>
+</header>
+  <main class="app-main">
+    <div class="app-page-header app-page-header--image" style="background-image: url(img/covers/cover-2.jpg)">
+      <div class="app-page-header__container wrapper">
+        <div class="app-breadcrumbs">
+  <div class="app-breadcrumbs-crumbs">
+    
+      <div class="app-breadcrumbs-crumbs__item">
+        <a href="#">Русское Сафари</a>
+      </div>
+      <svg class="app-breadcrumbs-crumbs__icon">
+        <use xlink:href="./img/sprite.svg#arrow-forward"></use>
+      </svg>
+    
+  </div>
+  <div class="app-breadcrumbs__current">Наша техника</div>
+</div>
+        <div class="app-page-header__separator"></div>
+      </div>
+    </div>
+    <div class="wrapper wrapper--no-mobile-margin">
+      <div class="app-equipment-card app-card app-main__margin">
+  <div class="app-equipment-card-preview">
+    <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment.jpg')">
+      <div class="app-equipment-card__badge app-badge">Самый быстрый</div>
+    </div>
+    <div class="app-equipment-card-preview__main">
+      <div class="app-equipment-card-header">
+        <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БТР-80</span>
+        <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый быстрый</div>
+      </div>
+      <div class="app-equipment-card-preview__description app-equipment-card-preview__item">БТР – 80 – мощная военная машина, которая стоит на вооружении российской армии. Познакомиться поближе с такой техникой захочет любой мужчина</div>
+    </div>
+  </div>
+  <div class="app-equipment-card__content">
+    <div class="app-equipment-card-header">
+      <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БТР-80</span>
+      <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый быстрый</div>
+    </div>
+    <div class="app-equipment-card__main">
+      <div class="app-equipment-card__rules">
+        <table class="app-rules undefined">
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность программы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">2 часа</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность катания</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">до 40 минут</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Возможность порулить</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">15 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Как катаемся</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">внутри</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Стрельбы из КМ и ППШ</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">включено</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Выстрел из башни</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">×</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Сложность трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">средняя</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Раздавить машину</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">50 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Длина трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">4 км</td>
+    </tr>
+  
+</table>
+      </div>
+      <div class="app-equipment-card-price">
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">9 500 ₽</div>
+  
+    <div class="app-price__old app-price__item">11 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">48 000 ₽</div>
+  
+    <div class="app-price__old app-price__item">57 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price-buttons">
+            <a href="#" class="app-equipment-card-price-buttons__item app-button-base app-button-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+      <div class="app-equipment-card app-card app-main__margin">
+  <div class="app-equipment-card-preview">
+    <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-1.jpg')">
+      <div class="app-equipment-card__badge app-badge">Самый мощный</div>
+    </div>
+    <div class="app-equipment-card-preview__main">
+      <div class="app-equipment-card-header">
+        <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на танке Т-55</span>
+        <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый мощный</div>
+      </div>
+      <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Грохот боевого танка весом в 40 тонн, трескающаяся под гусеницами земля… Это действительно впечатляющий подарок! О поездке на танке наверняка мечтали многие</div>
+    </div>
+  </div>
+  <div class="app-equipment-card__content">
+    <div class="app-equipment-card-header">
+      <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на танке Т-55</span>
+      <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый мощный</div>
+    </div>
+    <div class="app-equipment-card__main">
+      <div class="app-equipment-card__rules">
+        <table class="app-rules undefined">
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность программы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">2 часа</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность катания</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">до 40 минут</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Возможность порулить</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">15 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Как катаемся</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">внутри</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Стрельбы из КМ и ППШ</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">включено</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Выстрел из башни</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">×</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Сложность трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">средняя</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Раздавить машину</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">50 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Длина трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">4 км</td>
+    </tr>
+  
+</table>
+      </div>
+      <div class="app-equipment-card-price">
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">16 600 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">85 000 ₽</div>
+  
+    <div class="app-price__old app-price__item">98 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price-buttons">
+            <a href="#" class="app-equipment-card-price-buttons__item app-button-base app-button-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+      <div class="app-equipment-card app-card app-main__margin">
+  <div class="app-equipment-card-preview">
+    <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-3.jpg')">
+      <div class="app-equipment-card__badge app-badge">Самый драйвовый</div>
+    </div>
+    <div class="app-equipment-card-preview__main">
+      <div class="app-equipment-card-header">
+        <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БМП-2</span>
+        <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый драйвовый</div>
+      </div>
+      <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Катание на БМП-2 от компании «Русское сафари» – отличная возможность прочувствовать море адреналина</div>
+    </div>
+  </div>
+  <div class="app-equipment-card__content">
+    <div class="app-equipment-card-header">
+      <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БМП-2</span>
+      <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый драйвовый</div>
+    </div>
+    <div class="app-equipment-card__main">
+      <div class="app-equipment-card__rules">
+        <table class="app-rules undefined">
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность программы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">2 часа</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность катания</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">до 40 минут</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Возможность порулить</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">15 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Как катаемся</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">внутри</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Стрельбы из КМ и ППШ</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">включено</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Выстрел из башни</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">×</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Сложность трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">средняя</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Раздавить машину</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">50 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Длина трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">4 км</td>
+    </tr>
+  
+</table>
+      </div>
+      <div class="app-equipment-card-price">
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">9 500 ₽</div>
+  
+    <div class="app-price__old app-price__item">11 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">48 000 ₽</div>
+  
+    <div class="app-price__old app-price__item">57 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price-buttons">
+            <a href="#" class="app-equipment-card-price-buttons__item app-button-base app-button-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+      <div class="app-equipment-card app-card app-main__margin">
+  <div class="app-equipment-card-preview">
+    <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-4.jpg')">
+      <div class="app-equipment-card__badge app-badge">Самый комфортный</div>
+    </div>
+    <div class="app-equipment-card-preview__main">
+      <div class="app-equipment-card-header">
+        <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БРДМ-2</span>
+        <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый комфортный</div>
+      </div>
+      <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, славится способностью забираться в такие места, где ты на свой девяточке сядешь по самую крышу</div>
+    </div>
+  </div>
+  <div class="app-equipment-card__content">
+    <div class="app-equipment-card-header">
+      <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БРДМ-2</span>
+      <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый комфортный</div>
+    </div>
+    <div class="app-equipment-card__main">
+      <div class="app-equipment-card__rules">
+        <table class="app-rules undefined">
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность программы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">2 часа</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Продолжительность катания</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">до 40 минут</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Возможность порулить</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">15 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Как катаемся</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">внутри</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Стрельбы из КМ и ППШ</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">включено</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Выстрел из башни</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">×</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Сложность трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">средняя</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Раздавить машину</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">50 000 ₽</td>
+    </tr>
+  
+    <tr valign="baseline" class="app-rules__row">
+      <td>
+        <svg class="app-rules__icon">
+          <use xlink:href="./img/sprite.svg#star"></use>
+        </svg>
+      </td>
+      <td>
+        <span class="app-rules__text">Длина трассы</span>
+      </td>
+      <td valign="baseline" class="app-rules__value">4 км</td>
+    </tr>
+  
+</table>
+      </div>
+      <div class="app-equipment-card-price">
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">9 500 ₽</div>
+  
+    <div class="app-price__old app-price__item">11 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
+          <div class="app-price">
+  <div class="app-price__current app-price__item">48 000 ₽</div>
+  
+    <div class="app-price__old app-price__item">57 000 ₽</div>
+  </div>
+        </div>
+        <div class="app-equipment-card-price__item">
+          <div class="app-equipment-card-price-buttons">
+            <a href="#" class="app-equipment-card-price-buttons__item app-button-base app-button-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+    </div>
+  </main>
+  <footer class="app-footer">
+  <div class="app-footer__container">
+    <div class="app-footer-section">
+      <div class="app-footer-section">
+        <a href="/" class="app-footer-logo">
+          <img src="img/logo-singleline.svg" class="app-footer-logo__image">
+        </a>
+      </div>
+      <div class="app-footer-section">
+        <div class="app-footer-additional">
+          <div class="app-footer-additional__item">
+            <div class="app-phone">
+  <a href="tel:+74952205110" class="app-phone__call app-phone__item">
+    <svg class="app-phone__icon">
+      <use xlink:href="./img/sprite.svg#call"></use>
+    </svg>
+  </a>
+  <a href="tel:+74952205110" class="app-phone__number app-phone__item">+7 495 220-5-110</a>
+  </div>
+          </div>
+          <div class="app-footer-additional__item">
+            <div class="app-contact">
+  <svg class="app-contact__icon app-contact__item">
+    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+  </svg>
+  <a href="#" class="app-contact__link app-link app-link--white">WhatsApp</a>
+</div>
+          </div>
+          <div class="app-footer-additional__item">
+            <button data-template="language-menu" class="language">
+  <svg class="language__icon">
+    <use xlink:href="./img/sprite.svg#language"></use>
+  </svg>
+  <span href="#" class="language__current">Русский</span>
+  <span class="language__description">(ru)</span>
+</button>
+          </div>
+        </div>
+      </div>
+      <div class="app-footer-section">
+        <div class="app-social">
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#vk"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  
+    <a href="#" class="app-social__item">
+      <svg class="app-social__icon">
+        <use xlink:href="./img/sprite.svg#youtube"></use>
+      </svg>
+    </a>
+  
+</div>
+      </div>
+      <div class="app-footer-section">
+        <div class="app-footer-legal">
+          <div class="app-footer-legal__item">© 2010–2019 Русское сафари</div>
+          <div class="app-footer-legal__item">
+            <a href="#" class="app-footer-legal__link">Политика конфиденциальности</a>
+          </div>
+          <div class="app-footer-legal__item">
+            <a href="#" class="app-footer-legal__link">Публичная оферта</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-footer-section">
+      
+      <div class="app-footer-section">
+        <div class="app-footer-menu">
+          
+            <div class="app-footer-menu-title">
+              <a href="#" class="app-footer-menu__link">Наша техника</a>
+            </div>
+          
+            <ul class="app-footer-menu-list">
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">БМП-2</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">БРДМ-2</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">БТР-80</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Т-55</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Т-34</a>
+                </li>
+              
+            </ul>
+          </div>
+      </div>
+    
+      <div class="app-footer-section">
+        <div class="app-footer-menu">
+          
+            <div class="app-footer-menu-title">
+              <a href="#" class="app-footer-menu__link">Подарочные сертификаты</a>
+            </div>
+          
+            <ul class="app-footer-menu-list">
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Набор «Командир»</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Набор «Генерал»</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Набор «Маршал»</a>
+                </li>
+              
+            </ul>
+          </div>
+      </div>
+    
+      <div class="app-footer-section">
+        <div class="app-footer-menu">
+          
+            <div class="app-footer-menu-title">
+              <a href="#" class="app-footer-menu__link">Корпоративы</a>
+            </div>
+          </div>
+      </div>
+    
+    </div>
+    <div class="app-footer-section">
+      
+      <div class="app-footer-section">
+        <div class="app-footer-menu">
+          
+            <ul class="app-footer-menu-list app-footer-menu-list--space">
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">О нас</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Отзывы</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Галерея</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Статьи</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Вопросы и ответы</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Адреса и контакты</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Использовать сертификат</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Стрельбы</a>
+                </li>
+              
+                <li class="app-footer-menu-list__item">
+                  <a href="#" class="app-footer-menu__link">Полевая кухня</a>
+                </li>
+              
+            </ul>
+          </div>
+      </div>
+    
+    </div>
+    
+    
+  </div>
+</footer>
+
+  <div style="display: none;">
+  <div id="language-menu">
+    <ul class="language-list">
+      
+        <li class="language-list__item">
+          <a href="#">
+            <span class="language-list__item-label">Русский</span>
+            <span class="language-list__item-description">(ru)</span>
+          </a>
+        </li>
+      
+        <li class="language-list__item">
+          <a href="#">
+            <span class="language-list__item-label">English</span>
+            <span class="language-list__item-description">(en)</span>
+          </a>
+        </li>
+      
+        <li class="language-list__item">
+          <a href="#">
+            <span class="language-list__item-label">中國人</span>
+            <span class="language-list__item-description">(cn)</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+  <script defer="" src="./js/app.js"></script>
+</body>
+</html>
