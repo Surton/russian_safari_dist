@@ -427,12 +427,21 @@
   }
 }
 
+.app-button-loading {
+  color: transparent !important;
+}
+.app-button-loading .app-button__loader {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .app-button-base {
   font-family: Oswald;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
+  position: relative;
   padding: 16px;
   text-align: center;
   border: none;
@@ -508,6 +517,20 @@
 
 .app-button-disabled {
   cursor: default !important;
+}
+
+.app-button__loader {
+  display: none;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
 }
 
 .app-buttons {
@@ -1723,6 +1746,113 @@
   }
 }
 
+.app-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #272c24;
+}
+.app-form--center {
+  margin: 0 auto;
+}
+.app-form-title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+.app-form-label {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.app-form-label--light {
+  color: #646663;
+}
+.app-form-label--error {
+  color: #d8232a;
+}
+.app-form-row:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .app-form {
+    padding: 0 16px;
+  }
+}
+
+.app-input {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: #646663;
+  background-color: #e5e8df;
+  border: none;
+  resize: none;
+}
+.app-input:-ms-input-placeholder {
+  color: #646663;
+}
+.app-input::placeholder {
+  color: #646663;
+}
+.app-input:focus {
+  outline: none;
+  background-color: #dde0d8;
+}
+.app-input.error {
+  box-shadow: inset 0px 0px 0px 1px #d8232a;
+  color: #d8232a;
+}
+.app-input.error:-ms-input-placeholder {
+  color: #d8232a;
+}
+.app-input.error::placeholder {
+  color: #d8232a;
+}
+.app-input.error + .error {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 8px;
+  color: #d8232a;
+}
+.app-input--slim {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.app-input--resize-v {
+  resize: vertical;
+}
+.app-input--resize-h {
+  resize: horizontal;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.app-loader__image {
+  width: 1.5em;
+  height: 1.5em;
+  animation: preloader-rotate 1.5s infinite linear;
+}
+
 .app-header {
   z-index: 10000;
   position: absolute;
@@ -2432,9 +2562,6 @@
 .app-equipment {
   width: 100%;
 }
-.app-equipment .app-section-title {
-  margin-bottom: 24px;
-}
 .app-equipment .app-price {
   font-family: Oswald;
   font-style: normal;
@@ -2498,9 +2625,6 @@
 
 .app-instagram {
   width: 100%;
-}
-.app-instagram .app-section-title {
-  margin-bottom: 24px;
 }
 .app-instagram-slide {
   position: relative;
@@ -2682,9 +2806,6 @@
 
 .app-gift-baskets {
   width: 100%;
-}
-.app-gift-baskets .app-section-title {
-  margin-bottom: 24px;
 }
 .app-gift-baskets .app-price {
   font-family: Oswald;
