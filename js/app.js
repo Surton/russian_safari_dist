@@ -165,10 +165,19 @@ function initMobileHeader() {
   });
 }
 
+function initAccordions() {
+  $('[accordion-header]').click(function(e) {
+    var parent = e.currentTarget.parentElement;
+    $(parent).toggleClass('app-accordion--active');
+    $('[accordion-main]', e.currentTarget.parentElement).toggle('fast');
+  });
+}
+
 $(function() {
   initTippy();
   svg4everybody();
   initStickyHeader();
   initClamp();
   initMobileHeader();
+  initAccordions();
 });
