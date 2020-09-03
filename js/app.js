@@ -173,6 +173,34 @@ function initAccordions() {
   });
 }
 
+function resizeIframe() {
+  var resizeFrame = function resizeFrame(frame) {
+    return $(frame).height(frame.clientWidth * 0.56);
+  };
+
+  $('iframe').on('load', function(event) {
+    resizeFrame(event.target);
+    $(window).resize(function() {
+      return resizeFrame(event.target);
+    });
+  });
+}
+
+function initSelect() {
+  $('[select]').selectize({
+    create: true,
+    allowEmptyOption: false,
+    highlight: false,
+    onChange: function onChange(value) {
+      console.log(
+        '\u0412\u044B\u0431\u0440\u0430\u043D\u043E \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: '.concat(
+          value,
+        ),
+      );
+    },
+  });
+}
+
 $(function() {
   initTippy();
   svg4everybody();
@@ -180,4 +208,6 @@ $(function() {
   initClamp();
   initMobileHeader();
   initAccordions();
+  resizeIframe();
 });
+initSelect();

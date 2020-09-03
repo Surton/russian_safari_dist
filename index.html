@@ -398,7 +398,7 @@
 <script defer="" src="./js/benefits.slider.js"></script>
     <div class="app-equipment app-section app-main__margin">
   <div class="wrapper">
-    <div class="app-section-title">
+    <div class="app-section-title ">
   <div class="app-section-title__text app-section-title__item">Наша техника</div>
   </div>
     <div equipment-slider="" class="swiper-container app-equipment__slider">
@@ -479,20 +479,19 @@
 <script defer="" src="./js/equipment.slider.js"></script>
     <div class="app-gift-baskets app-section app-main__margin">
   <div class="wrapper">
-    <div class="app-section-title">
+    <div class="app-section-title ">
   <div class="app-section-title__text app-section-title__item">Подарочные наборы</div>
   </div>
-    <div class="app-gift-baskets__header">
-      <div class="app-gift-baskets-description">
-        <svg class="app-gift-baskets-description__icon">
+    <div class="app-section-header">
+      <div class="app-section-description app-section-header__item">
+        <svg class="app-section-description__icon">
           <use xlink:href="./img/sprite.svg#gift"></use>
         </svg>
-        <div class="app-gift-baskets-description__text">
+        <div class="app-section-description__text">
           Набор — это вид подарочного сертификата, дающий возможность выбора машины на свой вкус. Отлично подойдет, когда не знаете, что лучше подойдет.
         </div>
       </div>
-      <div class="app-gift-baskets__separator"></div>
-      <div class="app-gift-baskets-navigation">
+      <div class="app-gift-baskets-navigation app-section-header__item">
         <button gift-baskets-slider-button-prev="" class="app-button-base app-button-shadowed app-gift-baskets-navigation__item app-gift-baskets-navigation__item--left">
           <svg class="app-gift-baskets-navigation__icon">
             <use xlink:href="./img/sprite.svg#chevron-left"></use>
@@ -789,83 +788,86 @@
   </div>
 </div>
 <script defer="" src="./js/gift-baskets.slider.js"></script>
-    <div class="app-reviews app-main__margin">
+    <div class="app-reviews app-section app-main__margin">
   <div class="wrapper">
-    <div class="app-reviews__header">
-      <div class="app-section-title">
+    <div class="app-section-header app-reviews__header">
+      <div class="app-section-title app-section-header__item">
   <div class="app-section-title__text app-section-title__item">Отзывы</div>
   
     <div class="app-section-title__additional app-section-title__item">297</div>
   </div>
-      <div class="app-reviews__separator"></div>
-      <a href="#" class="app-button-base app-button-white app-button-bordered app-reviews__see-all">Смотреть все отзывы</a>
-      <div class="app-reviews-navigation">
-        <button reviews-slider-button-prev="" class="app-button-base app-button-white app-reviews-navigation__item app-reviews-navigation__item--left">
-          <svg class="app-reviews-navigation__icon">
-            <use xlink:href="./img/sprite.svg#chevron-left"></use>
-          </svg>
-        </button>
-        <button reviews-slider-button-next="" class="app-button-base app-button-white app-reviews-navigation__item app-reviews-navigation__item--right">
-          <svg class="app-reviews-navigation__icon">
-            <use xlink:href="./img/sprite.svg#chevron-right"></use>
-          </svg>
-        </button>
+      <div class="app-reviews__buttons app-section-header__item">
+        <div class="app-buttons">
+          <a href="#" class="app-button-base app-button-white app-button-bordered app-buttons__item app-reviews__see-all">Смотреть все отзывы</a>
+        </div>
+        <div class="app-reviews-navigation">
+          <button reviews-slider-button-prev="" class="app-button-base app-button-white app-reviews-navigation__item app-reviews-navigation__item--left">
+            <svg class="app-reviews-navigation__icon">
+              <use xlink:href="./img/sprite.svg#chevron-left"></use>
+            </svg>
+          </button>
+          <button reviews-slider-button-next="" class="app-button-base app-button-white app-reviews-navigation__item app-reviews-navigation__item--right">
+            <svg class="app-reviews-navigation__icon">
+              <use xlink:href="./img/sprite.svg#chevron-right"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <div reviews-slider="" class="swiper-container app-reviews__slider">
       <div class="swiper-wrapper app-reviews__wrapper">
         
-          <a href="#" class="swiper-slide app-reviews-slide app-card">
-            <div class="app-reviews-slide-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
-              <div class="app-reviews-slide-image__offset"></div>
-              
-                <svg class="app-reviews-slide-image__video">
-                  <use xlink:href="./img/sprite.svg#video"></use>
-                </svg>
-              </div>
-            <div class="app-reviews-slide__content">
-              <div class="app-reviews-slide__title">Американские друзья</div>
-              <div class="app-reviews-slide__date">24 декабря 2018</div>
-              <div class="app-reviews-slide__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
-            </div>
-          </a>
+          <a href="#" class="app-review-card app-card swiper-slide">
+  <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
+    <div class="app-review-card-image__offset"></div>
+    
+      <svg class="app-review-card-image__video">
+        <use xlink:href="./img/sprite.svg#video"></use>
+      </svg>
+    </div>
+  <div class="app-review-card__content">
+    <div class="app-review-card__title">Американские друзья</div>
+    <div class="app-review-card__date">24 декабря 2018</div>
+    <div class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
+  </div>
+</a>
         
-          <a href="#" class="swiper-slide app-reviews-slide app-card">
-            <div class="app-reviews-slide-image" style="background-image: url('img/mocks/reviews/reviews-2.jpg')">
-              <div class="app-reviews-slide-image__offset"></div>
-              </div>
-            <div class="app-reviews-slide__content">
-              <div class="app-reviews-slide__title">Роман</div>
-              <div class="app-reviews-slide__date">19 июня 2019</div>
-              <div class="app-reviews-slide__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
-            </div>
-          </a>
+          <a href="#" class="app-review-card app-card swiper-slide">
+  <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-2.jpg')">
+    <div class="app-review-card-image__offset"></div>
+    </div>
+  <div class="app-review-card__content">
+    <div class="app-review-card__title">Роман</div>
+    <div class="app-review-card__date">19 июня 2019</div>
+    <div class="app-review-card__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
+  </div>
+</a>
         
-          <a href="#" class="swiper-slide app-reviews-slide app-card">
-            <div class="app-reviews-slide-image" style="background-image: url('img/mocks/reviews/reviews-3.jpg')">
-              <div class="app-reviews-slide-image__offset"></div>
-              
-                <svg class="app-reviews-slide-image__video">
-                  <use xlink:href="./img/sprite.svg#video"></use>
-                </svg>
-              </div>
-            <div class="app-reviews-slide__content">
-              <div class="app-reviews-slide__title">Сергей</div>
-              <div class="app-reviews-slide__date">1 апреля 2019</div>
-              <div class="app-reviews-slide__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
-            </div>
-          </a>
+          <a href="#" class="app-review-card app-card swiper-slide">
+  <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-3.jpg')">
+    <div class="app-review-card-image__offset"></div>
+    
+      <svg class="app-review-card-image__video">
+        <use xlink:href="./img/sprite.svg#video"></use>
+      </svg>
+    </div>
+  <div class="app-review-card__content">
+    <div class="app-review-card__title">Сергей</div>
+    <div class="app-review-card__date">1 апреля 2019</div>
+    <div class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
+  </div>
+</a>
         
-          <a href="#" class="swiper-slide app-reviews-slide app-card">
-            <div class="app-reviews-slide-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
-              <div class="app-reviews-slide-image__offset"></div>
-              </div>
-            <div class="app-reviews-slide__content">
-              <div class="app-reviews-slide__title">Владислав</div>
-              <div class="app-reviews-slide__date">30 сентября 2019</div>
-              <div class="app-reviews-slide__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
-            </div>
-          </a>
+          <a href="#" class="app-review-card app-card swiper-slide">
+  <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
+    <div class="app-review-card-image__offset"></div>
+    </div>
+  <div class="app-review-card__content">
+    <div class="app-review-card__title">Владислав</div>
+    <div class="app-review-card__date">30 сентября 2019</div>
+    <div class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
+  </div>
+</a>
         
       </div>
     </div>
@@ -874,7 +876,7 @@
 <script defer="" src="./js/reviews.slider.js"></script>
     <div class="app-instagram app-section app-main__margin">
   <div class="wrapper wrapper--no-mobile-margin">
-    <div class="app-section-title">
+    <div class="app-section-title ">
   
     <svg class="app-section-title__icon app-section-title__item">
       <use xlink:href="./img/sprite.svg#instagram"></use>
