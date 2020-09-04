@@ -2049,6 +2049,13 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .app-card-list-main {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 .app-select {
   min-width: 220px;
   cursor: pointer;
@@ -2107,6 +2114,93 @@
 }
 .app-select .choices__item--selectable:after {
   display: none;
+}
+
+.app-gallery-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 259px;
+  height: 300px;
+  background-color: #ffffff;
+  color: #272c24;
+  overflow: hidden;
+}
+.app-gallery-card:hover .app-gallery-card__title {
+  color: #d8232a;
+}
+.app-gallery-card-image {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.app-gallery-card-image:after {
+  content: '';
+  display: block;
+  padding-top: 67%;
+}
+.app-gallery-card-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 16px;
+}
+.app-gallery-card-counters {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: -18px;
+  margin-top: -10px;
+  color: #646663;
+  fill: #646663;
+}
+.app-gallery-card-counters__item {
+  margin-right: 18px;
+  margin-top: 10px;
+}
+.app-gallery-card__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 100%;
+  max-height: 56px;
+  text-align: center;
+  overflow: hidden;
+}
+.app-gallery-card__title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.app-iconed-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.app-iconed-content__icon:not(:last-child) {
+  margin-right: 6px;
+  width: 1em;
+  height: 1em;
 }
 
 .app-header {
