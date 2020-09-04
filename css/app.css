@@ -2924,6 +2924,7 @@
   -ms-flex-align: stretch;
   align-items: stretch;
   margin-right: -6px;
+  margin-left: 16px;
 }
 .app-reviews-navigation__item {
   display: -ms-flexbox;
@@ -2955,14 +2956,16 @@
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+.app-reviews__slider .app-review-card {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
 .app-reviews__see-all {
   font-family: Oswald;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  display: block;
-  margin-right: 16px;
   padding: 8px 16px;
   color: #ffffff;
 }
