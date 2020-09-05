@@ -109,12 +109,12 @@ function initStickyHeader() {
 
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done; ) {
-        var el = _step.value;
+        var _el = _step.value;
 
-        if (window.pageYOffset > el.offsetTop) {
-          el.classList.add('sticky');
+        if (window.pageYOffset > _el.offsetTop) {
+          _el.classList.add('sticky');
         } else {
-          el.classList.remove('sticky');
+          _el.classList.remove('sticky');
         }
       }
     } catch (err) {
@@ -138,9 +138,9 @@ function initClamp() {
 
   try {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
-      var el = _step2.value;
+      var element = _step2.value;
       var attribute = el.getAttribute('clamp');
-      $clamp(el, {
+      $clamp(element, {
         clamp: attribute,
         useNativeClamp: false,
       });
@@ -178,7 +178,7 @@ function resizeIframe() {
     return $(frame).height(frame.clientWidth * 0.56);
   };
 
-  $('iframe').on('load', function(event) {
+  $('iframe[resize]').on('load', function(event) {
     resizeFrame(event.target);
     $(window).resize(function() {
       return resizeFrame(event.target);
@@ -201,6 +201,47 @@ function initSelect() {
   });
 }
 
+function initTabs() {
+  var elements = document.querySelectorAll('[tabs]');
+
+  var _iterator3 = _createForOfIteratorHelper(elements),
+    _step3;
+
+  try {
+    var _loop = function _loop() {
+      var element = _step3.value;
+
+      var setActive = function setActive(id) {
+        var navigationActiveClass = 'app-tabs-header__item--active';
+        var tabActiveClass = 'app-tabs-content-tab--active';
+        $('[tabs-content-item]', element).removeClass(tabActiveClass);
+        $('[tabs-navigation-item]', element).removeClass(navigationActiveClass);
+        $('[tabs-content-item][data-tab="'.concat(id, '"]'), element).addClass(
+          tabActiveClass,
+        );
+        $(
+          '[tabs-navigation-item][data-tab="'.concat(id, '"]'),
+          element,
+        ).addClass(navigationActiveClass);
+      };
+
+      setActive(element.getAttribute('data-active'));
+      $('[tabs-navigation-item]', element).click(function() {
+        var id = $(this).attr('data-tab');
+        setActive(id);
+      });
+    };
+
+    for (_iterator3.s(); !(_step3 = _iterator3.n()).done; ) {
+      _loop();
+    }
+  } catch (err) {
+    _iterator3.e(err);
+  } finally {
+    _iterator3.f();
+  }
+}
+
 $(function() {
   initTippy();
   svg4everybody();
@@ -209,5 +250,6 @@ $(function() {
   initMobileHeader();
   initAccordions();
   resizeIframe();
+  initTabs();
 });
 initSelect();

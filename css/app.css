@@ -244,16 +244,18 @@
 .app-phone {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .app-phone__call {
   display: -ms-flexbox;
   display: flex;
 }
 .app-phone__icon {
-  width: 18px;
-  height: 18px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
   fill: #d8232a;
 }
 .app-phone__number {
@@ -276,23 +278,49 @@
   margin-right: 10px;
 }
 
-.app-contact {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
+.app-contacts--white .app-contacts-item {
+  color: #ffffff;
 }
-.app-contact__icon {
-  width: 20px;
-  height: 20px;
+.app-contacts--white .app-contacts-item__icon {
   fill: #ffffff;
 }
-.app-contact__item:not(:last-child) {
+.app-contacts--white .app-contacts-item__contact {
+  color: #ffffff;
+}
+
+.app-contacts--red-icon .app-contacts-item__icon {
+  fill: #d8232a;
+}
+
+.app-contacts--wide-icon-margin .app-contacts-item__icon:not(:last-child) {
+  margin-right: 16px;
+}
+
+.app-contacts-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #272c24;
+  fill: #272c24;
+}
+.app-contacts-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.app-contacts-item__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  fill: #272c24;
+}
+.app-contacts-item__contact {
+  display: block;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  color: #272c24;
+}
+.app-contacts-item__item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -2122,7 +2150,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   width: 259px;
-  height: 300px;
+  min-height: 300px;
   background-color: #ffffff;
   color: #272c24;
   overflow: hidden;
@@ -2167,14 +2195,16 @@
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-right: -18px;
-  margin-top: -10px;
+  margin-top: -6px;
   color: #646663;
   fill: #646663;
 }
 .app-gallery-card-counters__item {
   margin-right: 18px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .app-gallery-card__title {
   font-family: Oswald;
@@ -2191,6 +2221,13 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .app-gallery-card {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
 .app-iconed-content {
   display: -ms-flexbox;
   display: flex;
@@ -2201,6 +2238,93 @@
   margin-right: 6px;
   width: 1em;
   height: 1em;
+}
+
+.app-tabs {
+  background-color: #ffffff;
+}
+.app-tabs-header {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 32px;
+  overflow: auto;
+  border-bottom: 1px solid #e5e8df;
+}
+.app-tabs-header--center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.app-tabs-header__container {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 24px;
+}
+.app-tabs-header__item {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  position: relative;
+  padding: 22px 0;
+  letter-spacing: 0.5px;
+  color: #646663;
+  border: none;
+  background-color: transparent;
+}
+.app-tabs-header__item:hover,
+.app-tabs-header__item:focus,
+.app-tabs-header__item--active {
+  color: #272c24;
+}
+.app-tabs-header__item:focus {
+  outline: none;
+}
+.app-tabs-header__item:not(:last-child) {
+  margin-right: 32px;
+}
+.app-tabs-header__item[data-count]:after {
+  content: attr(data-count);
+  margin-left: 8px;
+  font-weight: 200;
+}
+.app-tabs-header__item--active:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #d8232a;
+  left: 0;
+  bottom: 0;
+}
+.app-tabs-content-tab {
+  display: none;
+}
+.app-tabs-content-tab--active {
+  display: block;
+}
+.app-tabs-content-tab__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.app-tabs-content-tab__item--wrapped {
+  max-width: 448px;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: content-box;
+}
+
+.app-tabs {
+  background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .app-tabs-header__item {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 16px 0;
+  }
 }
 
 .app-header {
