@@ -242,6 +242,77 @@ function initTabs() {
   }
 }
 
+function initModals() {
+  MicroModal.init({
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true,
+  }); // Добавлен дополнительный обработчик для кнопок, т.к библиотечная реализация не работает, если внутри есть контент (например, иконка в кнопке)
+
+  var elements = document.querySelectorAll('[app-modal]');
+
+  var _iterator4 = _createForOfIteratorHelper(elements),
+    _step4;
+
+  try {
+    var _loop2 = function _loop2() {
+      var element = _step4.value;
+      $('[app-modal-close]', element).click(function(event) {
+        MicroModal.close($(element).attr('id'));
+      });
+    };
+
+    for (_iterator4.s(); !(_step4 = _iterator4.n()).done; ) {
+      _loop2();
+    }
+  } catch (err) {
+    _iterator4.e(err);
+  } finally {
+    _iterator4.f();
+  }
+}
+
+function initFileInputs() {
+  var elements = document.querySelectorAll('[app-input-file]');
+  elements.forEach(function(element) {
+    var _this = this;
+
+    $(element).attr('tabindex', -1);
+    var label = $(
+      '<label tabindex="0" for="'
+        .concat(
+          $(element).attr('id'),
+          '" class="app-input app-input-file-label" title="',
+        )
+        .concat($(element).attr('placeholder'), '"></label>'),
+    );
+    var icon = $(
+      '<svg class="app-input-file-label__icon"><use xlink:href="./img/sprite.svg#attach"></use></svg>',
+    );
+    var placeholder = $(
+      '<div class="app-input-file-label__placeholder">'.concat(
+        $(element).attr('placeholder'),
+        '</div>',
+      ),
+    );
+    $(element).after(label);
+    $(label).append(icon);
+    $(label).append(placeholder);
+    $(element).change(function(event) {
+      if (event.files && event.files.length > 1) {
+        fileName = (event.getAttribute('data-multiple-caption') || '').replace(
+          '{count}',
+          _this.files.length,
+        );
+      } else {
+        fileName = event.target.value.split('\\').pop();
+      }
+
+      $(placeholder).html(fileName || $(element).attr('placeholder'));
+    });
+  });
+}
+
 $(function() {
   initTippy();
   svg4everybody();
@@ -251,5 +322,7 @@ $(function() {
   initAccordions();
   resizeIframe();
   initTabs();
+  initSelect();
+  initModals();
+  initFileInputs();
 });
-initSelect();

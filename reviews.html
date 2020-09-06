@@ -308,12 +308,12 @@
           </div>
           <div class="app-section-header__item">
             <div class="app-buttons app-buttons--center">
-              <a href="#" class="app-button-base app-button-primary app-button-wide-45 app-button-slim app-buttons__item">
+              <button data-micromodal-trigger="review" class="app-button-base app-button-primary app-button-wide-45 app-button-slim app-buttons__item">
                 <svg class="app-button__icon">
                   <use xlink:href="./img/sprite.svg#write-pen"></use>
                 </svg>
                 <span>Оставить отзыв</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -692,7 +692,69 @@
     </div>
   </div>
 
+  <div app-modal="" class="app-modal" id="review">
+    <div data-micromodal-close="" class="app-modal__overlay" tabindex="-1">
+      <div class="app-modal__container" style="width: 580px;" role="dialog" aria-modal="true">
+        <header class="app-modal__header">
+          <div class="app-modal__title">Оставить отзыв</div>
+          <button app-modal-close="" class="app-modal-close">
+            <svg class="app-modal-close__icon">
+              <use xlink:href="./img/sprite.svg#close-box"></use>
+            </svg>
+          </button>
+        </header>
+        <main class="app-modal__content">
+          <form form-review="" class="app-form app-form--center">
+            <div class="app-form-row">
+              <div class="app-form-column" style="max-width: 360px">
+                <input name="name" type="text" class="app-input" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column" style="max-width: 360px">
+                <input name="phone" type="text" class="app-input" placeholder="Телефон" id="form-review-phone">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column" style="max-width: 360px">
+                <input name="email" type="text" class="app-input" placeholder="Электронная почта" id="form-review-email">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column" style="max-width: 360px">
+                <input app-input-file="" name="file" id="file" type="file" class="app-input-file" placeholder="Приложить файл">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column">
+                <textarea name="review" rows="5" class="app-input" placeholder="Ваш отзыв"></textarea>
+              </div>
+            </div>
+            <div form-error="" class="app-form-row"></div>
+            <div class="app-form-row">
+              <div class="app-buttons">
+                <button form-submit="" type="submit" class="app-button-base app-button-primary app-buttons__item h200">
+                  <span>Отправить заявку</span>
+                  <div class="app-loader app-button__loader">
+                    <svg class="app-loader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+                <button app-modal-close="" type="button" class="app-button-base app-button-light app-buttons__item h200">Отменить</button>
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="p300 app-form-privacy">Отправляя заявку, вы соглашаетесь с <a href="#" class="app-form-privacy__link">политикой конфиденциальности</a></div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
   <script defer="" src="./js/app.js"></script>
+  <script defer="" src="./js/form.js"></script>
 </body>
 
 </html>

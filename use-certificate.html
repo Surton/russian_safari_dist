@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Галерея</title>
+  <title>Использовать сертификат</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -293,183 +293,47 @@
             </svg>
 
           </div>
-          <div class="app-breadcrumbs__current">Галерея</div>
+          <div class="app-breadcrumbs__current">Использовать сертификат</div>
         </div>
       </div>
     </div>
-    <section class="app-main__margin app-section">
-      <div class="wrapper">
-        <div class="app-card-list">
-          <div class="app-card-list-header app-card-list__item">
-            <div class="app-card-list-header__item">
-              <select select="" data-trigger="" name="period" class="app-select">
-                <option value="Choice 1">За все время</option>
-                <option value="Choice 2">За все время 2</option>
-                <option value="Choice 3">За все время 3</option>
-                <option value="Choice 4">За все время 4</option>
-              </select>
-            </div>
+    <div class="wrapper wrapper--no-mobile-margin">
+      <section class="app-certificate app-main__margin">
+        <div class="app-certificate__container">
+          <div class="app-certificate-forms">
+            <form form-certificate-verification="" class="app-form app-certificate-forms__item">
+              <div class="app-form-title app-form-row">Проверка сертификата</div>
+              <div class="app-form-row">
+                <span class="app-form-label">Укажите номер сертификата, он находится в правом нижнем углу карточки и на бланке сертификата.</span>
+              </div>
+              <div class="app-form-row">
+                <div class="app-form-row__item app-certificate__number">
+                  <input name="number" type="text" class="app-input" placeholder="Номер сертификата">
+                </div>
+                <div class="app-form-row__item">
+                  <button form-submit="" type="submit" class="app-button-base app-button-primary h200">
+                    <span>Проверить</span>
+                    <div class="app-loader app-button__loader">
+                      <svg class="app-loader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+                        </path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div form-error="" class="app-form-row"></div>
+              <div class="app-form-row">
+                <span class="app-form-label app-form-label--light">Проверить и активировать сертификат вы также можете по телефону: +7 495 220-5-110.</span>
+              </div>
+            </form>
           </div>
-          <div class="app-card-list-main app-card-list__item">
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-1.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Корпоративы</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-2.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Сафари на БРДМ-2</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-3.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Дети — наше будущее</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-4.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">В танке главное что?</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-1.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Русское сафари</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-6.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Это какой-то альбом</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-7.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">На поле танки грохотали</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#camera"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">1 видео</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="app-gallery-card app-card-list-main__item">
-              <div class="app-gallery-card-image" style="background-image: url('img/mocks/gallery-cards/gallery-cards-8.jpg')"></div>
-              <div class="app-gallery-card-content">
-                <div class="app-gallery-card__title">Люблю повеселиться, особенно пожрать</div>
-                <div class="app-gallery-card-counters">
-
-                  <div class="app-iconed-content app-gallery-card-counters__item">
-                    <svg class="app-iconed-content__icon">
-                      <use xlink:href="./img/sprite.svg#photo"></use>
-                    </svg>
-                    <span class="app-iconed-content__content">19 фото</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+          <div class="app-certificate__image">
+            <img src="img/certificate.png" alt="Сертификат">
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <footer class="app-footer">
     <div class="app-footer__container">
