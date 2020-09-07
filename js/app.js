@@ -109,12 +109,12 @@ function initStickyHeader() {
 
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done; ) {
-        var _el = _step.value;
+        var el = _step.value;
 
-        if (window.pageYOffset > _el.offsetTop) {
-          _el.classList.add('sticky');
+        if (window.pageYOffset > el.offsetTop) {
+          el.classList.add('sticky');
         } else {
-          _el.classList.remove('sticky');
+          el.classList.remove('sticky');
         }
       }
     } catch (err) {
@@ -139,7 +139,7 @@ function initClamp() {
   try {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
       var element = _step2.value;
-      var attribute = el.getAttribute('clamp');
+      var attribute = element.getAttribute('clamp');
       $clamp(element, {
         clamp: attribute,
         useNativeClamp: false,
