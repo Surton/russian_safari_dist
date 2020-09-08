@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <title>Использовать сертификат</title>
+  <title>Заказ оплачен</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -280,59 +280,94 @@
     </div>
   </header>
   <main class="app-main">
-    <div class="app-page-header">
-      <div class="app-page-header__container wrapper">
-        <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
-
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
-            <svg class="app-breadcrumbs-crumbs__icon">
-              <use xlink:href="./img/sprite.svg#arrow-forward"></use>
+    <div class="wrapper wrapper--no-mobile-margin">
+      <div class="app-order app-main__margin">
+        <div class="app-order__container">
+          <div class="app-order-title app-order__item">
+            <svg class="app-order-title__icon">
+              <use xlink:href="./img/sprite.svg#star"></use>
             </svg>
-
+            <div class="app-order-title__text">Заказ оплачен</div>
+            <svg class="app-order-title__icon">
+              <use xlink:href="./img/sprite.svg#star"></use>
+            </svg>
           </div>
-          <div class="app-breadcrumbs__current">Использовать сертификат</div>
+          <div class="app-certificate-card app-order__item">
+            <div class="app-certificate-card__content">
+              <div class="app-certificate-card__image" style="background-image: url(img/mocks/equipments/equipment.jpg)"></div>
+              <div class="app-certificate-card-info">
+                <div class="app-certificate-card-info__title">Сафари на БРДМ-2</div>
+                <div class="app-certificate-card-info__price">
+                  <div class="app-price ">
+                    <div class="app-price__current app-price__item">16 500 ₽</div>
+
+                    <div class="app-price__old app-price__item">19 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="img/certificate.png" alt="Сертификат" class="app-certificate-card__certificate">
+          </div>
+          <div class="app-order-info app-order__item">
+            <div class="app-order-info__item p600b">Заказ №002456</div>
+            <div class="app-order-info__item p400">С учетом доставки</div>
+            <div class="app-order-info__item">
+              <div class="app-price h600">
+                <div class="app-price__current app-price__item">16 900 ₽</div>
+              </div>
+            </div>
+            <div class="app-order-info__item">
+              <div class="app-buttons">
+                <a href="#" class="app-button-base app-button-secondary app-button-bordered app-button-wide-32 app-buttons__item">Оплачено</a>
+              </div>
+            </div>
+          </div>
+          <div class="app-order-footer app-order__item">
+            <div class="app-order-footer__description">
+              Если что, звоните:
+            </div>
+            <div class="app-order-footer__phone">
+              <div class="app-phone">
+                <a href="tel:+74952205110" class="app-phone__call app-phone__item">
+                  <svg class="app-phone__icon">
+                    <use xlink:href="./img/sprite.svg#call"></use>
+                  </svg>
+                </a>
+                <a href="tel:+74952205110" class="app-phone__number app-phone__item">+7 495 220-5-110</a>
+              </div>
+            </div>
+            <div class="app-order-footer__socials">
+              <div class="app-social app-social--shadowed">
+
+                <a href="#" class="app-social__item">
+                  <svg class="app-social__icon">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="app-social__item">
+                  <svg class="app-social__icon">
+                    <use xlink:href="./img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="app-social__item">
+                  <svg class="app-social__icon">
+                    <use xlink:href="./img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="app-social__item">
+                  <svg class="app-social__icon">
+                    <use xlink:href="./img/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="wrapper wrapper--no-mobile-margin">
-      <section class="app-certificate app-main__margin">
-        <div class="app-certificate__container">
-          <div class="app-certificate-forms">
-            <form form-certificate-verification="" class="app-form app-certificate-forms__item">
-              <div class="app-form-title app-form-row">Проверка сертификата</div>
-              <div class="app-form-row">
-                <span class="app-form-label">Укажите номер сертификата, он находится в правом нижнем углу карточки и на бланке сертификата.</span>
-              </div>
-              <div class="app-form-row">
-                <div class="app-form-row__item app-certificate__number">
-                  <input name="number" type="text" class="app-input" placeholder="Номер сертификата">
-                </div>
-                <div class="app-form-row__item">
-                  <button form-submit="" type="submit" class="app-button-base app-button-primary h200">
-                    <span>Проверить</span>
-                    <div class="app-loader app-button__loader">
-                      <svg class="app-loader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-                        </path>
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <div form-error="" class="app-form-row"></div>
-              <div class="app-form-row">
-                <span class="app-form-label app-form-label--light">Проверить и активировать сертификат вы также можете по телефону: +7 495 220-5-110.</span>
-              </div>
-            </form>
-          </div>
-          <div class="app-certificate__image">
-            <img src="img/certificate.png" alt="Сертификат">
-          </div>
-        </div>
-      </section>
     </div>
   </main>
   <footer class="app-footer">
