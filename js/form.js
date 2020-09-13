@@ -320,10 +320,66 @@ function initCallMe() {
   });
 }
 
+function initReserve() {
+  $('[form-reserve]').each(function() {
+    var errorContainer = $('[form-error]', this);
+    errorContainer.hide();
+    var validateOptions = {
+      rules: {
+        phone: {
+          required: {
+            param: true,
+            depends: function depends() {
+              return !$('#form-reserve-email').val();
+            },
+          },
+        },
+        email: {
+          required: {
+            param: true,
+            depends: function depends() {
+              return !$('#form-reserve-phone').val();
+            },
+          },
+          email: true,
+        },
+      },
+      messages: {
+        phone: {
+          required: 'Укажите телефон или почту',
+        },
+        email: {
+          required: 'Укажите телефон или почту',
+          email: 'Введите корректный адрес',
+        },
+      },
+      submitHandler: function submitHandler(form) {
+        errorContainer.empty();
+        $('[form-submit]', form).addClass('app-button-loading');
+        $('[form-submit]', form).addClass('app-button-disabled');
+        $('[form-submit]', form).attr('disabled', 'true');
+        setTimeout(function() {
+          $('[form-submit]', form).removeClass('app-button-loading');
+          $('[form-submit]', form).removeClass('app-button-disabled');
+          $('[form-submit]', form).removeAttr('disabled', 'true');
+          errorContainer.append(
+            $(
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>',
+            ),
+          );
+          errorContainer.show();
+        }, 2000);
+      },
+    };
+    $(this).validate(validateOptions);
+  });
+}
+
 $(function() {
   initCertificateVerification();
   initCertificateActivation();
   initQuestion();
   initReview();
   initCallMe();
+  initReserve();
 });

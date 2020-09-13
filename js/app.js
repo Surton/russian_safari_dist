@@ -81,7 +81,7 @@ function initTippy() {
     content: function content(reference) {
       var id = reference.getAttribute('data-template');
       var template = document.getElementById(id);
-      return template.innerHTML;
+      return template ? template.innerHTML : null;
     },
   });
   tippy('[header-dropdown-template]', {
@@ -95,12 +95,40 @@ function initTippy() {
     content: function content(reference) {
       var id = reference.getAttribute('header-dropdown-template');
       var template = document.getElementById(id);
-      return template.innerHTML;
+      return template ? template.innerHTML : null;
+    },
+  });
+  tippy('[description-popover]', {
+    trigger: 'click',
+    placement: 'bottom',
+    theme: 'custom',
+    allowHTML: true,
+    interactive: true,
+    duration: 100,
+    arrow: false,
+    appendTo: function appendTo() {
+      return document.body;
+    },
+    content: function content(reference) {
+      var id = reference.getAttribute('description-popover');
+      var template = document.getElementById(id);
+      return template ? template.innerHTML : null;
+    },
+    onCreate: function onCreate(instance) {
+      $('[description-popover-close]', instance.popper).on('click', function() {
+        instance.hide();
+      });
+    },
+    onTrigger: function onTrigger(_instance, event) {
+      event.preventDefault();
+    },
+    onUntrigger: function onUntrigger(_instance, event) {
+      event.preventDefault();
     },
   });
 }
 
-function initStickyHeader() {
+function initSticky() {
   var elements = document.querySelectorAll('[sticky]');
 
   var setStickyState = function setStickyState() {
@@ -110,11 +138,45 @@ function initStickyHeader() {
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done; ) {
         var el = _step.value;
+        var id = $(el).attr('data-id');
+        var clone = document.getElementById(id);
+        var offset = getStickyOffset(clone);
 
-        if (window.pageYOffset > el.offsetTop) {
-          el.classList.add('sticky');
-        } else {
-          el.classList.remove('sticky');
+        if (window.pageYOffset + offset < el.offsetTop) {
+          // Удаляем sticky-клона, если дошли до исходного элемента
+          if (clone) {
+            $(el)
+              .css({
+                visibility: 'visible',
+              })
+              .attr('data-stickied', false)
+              .scrollLeft($(clone).scrollLeft())
+              .scrollTop($(clone).scrollTop());
+            $(clone).remove();
+          }
+        } else if (!clone) {
+          // Добавляем sticky-клона, прячем исходный элемент
+          $(el)
+            .clone({
+              withDataAndEvents: true,
+              deepWithDataAndEvents: true,
+            })
+            .appendTo('body')
+            .attr('id', id)
+            .removeAttr('sticky')
+            .removeAttr('data-id')
+            .attr('sticky-clone', '')
+            .addClass('sticky')
+            .css({
+              top: offset,
+            })
+            .scrollLeft($(el).scrollLeft())
+            .scrollTop($(el).scrollTop());
+          $(el)
+            .css({
+              visibility: 'hidden',
+            })
+            .attr('data-stickied', true);
         }
       }
     } catch (err) {
@@ -126,7 +188,7 @@ function initStickyHeader() {
 
   if (elements.length > 0) {
     setStickyState();
-    $(window).scroll(setStickyState);
+    $(window).on('scroll', setStickyState);
   }
 }
 
@@ -154,7 +216,7 @@ function initClamp() {
 
 function initMobileHeader() {
   var activeClass = 'app-header-mobile--active';
-  $('[header-switcher]').click(function() {
+  $('[header-switcher]').on('click', function() {
     $('[app-header-mobile]').toggleClass(activeClass);
 
     if ($('[app-header-mobile]').hasClass(activeClass)) {
@@ -166,10 +228,9 @@ function initMobileHeader() {
 }
 
 function initAccordions() {
-  $('[accordion-header]').click(function(e) {
+  $('[accordion-header]').on('click', function(e) {
     var parent = e.currentTarget.parentElement;
     $(parent).toggleClass('app-accordion--active');
-    $('[accordion-main]', e.currentTarget.parentElement).toggle('fast');
   });
 }
 
@@ -180,7 +241,7 @@ function resizeIframe() {
 
   $('iframe[resize]').on('load', function(event) {
     resizeFrame(event.target);
-    $(window).resize(function() {
+    $(window).on('resize', function() {
       return resizeFrame(event.target);
     });
   });
@@ -245,7 +306,7 @@ function initTabs() {
       };
 
       setActive(element.getAttribute('data-active'));
-      $('[tabs-navigation-item]', element).click(function() {
+      $('[tabs-navigation-item]', element).on('click', function() {
         var id = $(this).attr('data-tab');
         setActive(id);
       });
@@ -276,7 +337,7 @@ function initModals() {
   try {
     var _loop2 = function _loop2() {
       var element = _step4.value;
-      $('[app-modal-close]', element).click(function(event) {
+      $('[app-modal-close]', element).on('click', function(event) {
         MicroModal.close($(element).attr('id'));
       });
     };
@@ -292,50 +353,254 @@ function initModals() {
 }
 
 function initFileInputs() {
+  var _this = this;
+
   var elements = document.querySelectorAll('[app-input-file]');
-  elements.forEach(function(element) {
-    var _this = this;
 
-    $(element).attr('tabindex', -1);
-    var label = $(
-      '<label tabindex="0" for="'
-        .concat(
-          $(element).attr('id'),
-          '" class="app-input app-input-file-label" title="',
-        )
-        .concat($(element).attr('placeholder'), '"></label>'),
-    );
-    var icon = $(
-      '<svg class="app-input-file-label__icon"><use xlink:href="./img/sprite.svg#attach"></use></svg>',
-    );
-    var placeholder = $(
-      '<div class="app-input-file-label__placeholder">'.concat(
-        $(element).attr('placeholder'),
-        '</div>',
-      ),
-    );
-    $(element).after(label);
-    $(label).append(icon);
-    $(label).append(placeholder);
-    $(element).change(function(event) {
-      if (event.files && event.files.length > 1) {
-        fileName = (event.getAttribute('data-multiple-caption') || '').replace(
-          '{count}',
-          _this.files.length,
+  var _iterator5 = _createForOfIteratorHelper(elements),
+    _step5;
+
+  try {
+    var _loop3 = function _loop3() {
+      var element = _step5.value;
+      $(element).attr('tabindex', -1);
+      var label = $(
+        '<label tabindex="0" for="'
+          .concat(
+            $(element).attr('id'),
+            '" class="app-input app-input-file-label" title="',
+          )
+          .concat($(element).attr('placeholder'), '"></label>'),
+      );
+      var icon = $(
+        '<svg class="app-input-file-label__icon"><use xlink:href="./img/sprite.svg#attach"></use></svg>',
+      );
+      var placeholder = $(
+        '<div class="app-input-file-label__placeholder">'.concat(
+          $(element).attr('placeholder'),
+          '</div>',
+        ),
+      );
+      $(element).after(label);
+      $(label).append(icon);
+      $(label).append(placeholder);
+      $(element).change(function(event) {
+        if (event.files && event.files.length > 1) {
+          fileName = (
+            event.getAttribute('data-multiple-caption') || ''
+          ).replace('{count}', _this.files.length);
+        } else {
+          fileName = event.target.value.split('\\').pop();
+        }
+
+        $(placeholder).html(fileName || $(element).attr('placeholder'));
+      });
+    };
+
+    for (_iterator5.s(); !(_step5 = _iterator5.n()).done; ) {
+      _loop3();
+    }
+  } catch (err) {
+    _iterator5.e(err);
+  } finally {
+    _iterator5.f();
+  }
+}
+
+function initPageNavigation() {
+  var pageNavigationAnchorAttr = 'page-navigation-anchor';
+  var pageNavigationAttr = 'page-navigation';
+  var anchors = document.querySelectorAll(
+    '['.concat(pageNavigationAnchorAttr, ']'),
+  );
+  var items = document.querySelectorAll('['.concat(pageNavigationAttr, ']'));
+
+  var scrollTo = function scrollTo(query, callback) {
+    // Позиция скролла рассчитывается исходя из высоты sticky-элементов
+    var scrollTop = $(query).offset().top - getStickyOffset();
+
+    if (window.pageYOffset !== scrollTop) {
+      $([document.documentElement, document.body]).animate(
+        {
+          scrollTop: scrollTop,
+        },
+        callback,
+      );
+    }
+  };
+
+  $(items).on('click', function(e) {
+    e.preventDefault();
+    var target = $(e.target).attr(pageNavigationAttr); // В callback-функции вызывается второй раз скролл, т.к во время скролла могли появиться sticky-элементы
+    // Заранее отступы рассчитать невозможно
+
+    scrollTo(
+      '['.concat(pageNavigationAnchorAttr, '=').concat(target, ']'),
+      function() {
+        return scrollTo(
+          '['.concat(pageNavigationAnchorAttr, '=').concat(target, ']'),
         );
-      } else {
-        fileName = event.target.value.split('\\').pop();
-      }
-
-      $(placeholder).html(fileName || $(element).attr('placeholder'));
-    });
+      },
+    );
   });
+
+  var setActiveNavigation = function setActiveNavigation() {
+    var current = $(anchors[0]).attr(pageNavigationAnchorAttr);
+
+    for (var i = 1; i < anchors.length; i++) {
+      // Текущий элемент рассчитывается с учетом sticky-элементов
+      // + 1 пиксель необходим, т.к по факту scrollTo не доходит до элемента на 1 пиксель
+      if (
+        $(anchors[i]).offset().top <
+        window.pageYOffset + getStickyOffset() + 1
+      ) {
+        current = $(anchors[i]).attr(pageNavigationAnchorAttr);
+      }
+    }
+
+    $('['.concat(pageNavigationAttr, ']')).removeClass('active');
+    $('['.concat(pageNavigationAttr, '=').concat(current, ']')).addClass(
+      'active',
+    );
+  };
+
+  setActiveNavigation();
+
+  if (anchors.length > 0 && items.length > 0) {
+    $(window).on('scroll', debounce(setActiveNavigation, 1));
+  }
+}
+
+function initInputCounter() {
+  var counter = 'app-input-counter';
+  var counterMinus = ''.concat(counter, '-minus');
+  var counterPlus = ''.concat(counter, '-plus');
+  var counterInput = ''.concat(counter, '-input');
+  var counterIcon = ''.concat(counter, '-icon');
+  var counterPlaceholder = ''.concat(counter, '-placeholder');
+
+  var updateState = function updateState(counter) {
+    var value = $('['.concat(counterInput, ']'), counter).val();
+    var max = $('['.concat(counterInput, ']'), counter).attr('max');
+    var placeholder = $(counter).data('placeholder');
+
+    if (placeholder && max) {
+      $('['.concat(counterPlaceholder, ']'), counter).html(
+        placeholder.replace('{current}', value).replace('{max}', max),
+      );
+    }
+
+    $('['.concat(counterIcon, ']'), counter)
+      .removeClass('active')
+      .slice(0, value)
+      .addClass('active');
+  };
+
+  var counters = document.querySelectorAll('['.concat(counter, ']'));
+
+  var _iterator6 = _createForOfIteratorHelper(counters),
+    _step6;
+
+  try {
+    var _loop4 = function _loop4() {
+      var item = _step6.value;
+      // Инициализация компонента
+      var input = $('['.concat(counterInput, ']'), item);
+      var min = +input.attr('min') || 0;
+      var max = +input.attr('max');
+      var placeholder = $(item).data('placeholder'); // Инициализация начального значения
+
+      input.val(min); // Если есть плейсхолдер и максимальное значение, отключаем поле для ввода и показываем placeholder
+
+      if (placeholder && max) {
+        input.attr('disabled', true);
+        $('['.concat(counterPlaceholder, ']'), item).show(); // Обновляем стейт, чтобы отобразить значение в placeholder
+
+        updateState(item);
+      } else {
+        input.attr('type', 'number');
+        input.attr('disabled', false);
+        $('['.concat(counterPlaceholder, ']'), item).hide();
+      } // Обработка события нажатия на минус
+
+      $('['.concat(counterMinus, ']'), item).on('click', function() {
+        if (+input.val() - 1 >= min) {
+          input.val(+input.val() - 1);
+          input.trigger('input');
+        }
+
+        updateState(item);
+      }); // Обработка события нажатия на плюс
+
+      $('['.concat(counterPlus, ']'), item).on('click', function() {
+        if (+input.val() + 1 <= max || !max) {
+          input.val(+input.val() + 1);
+          input.trigger('input');
+        }
+
+        updateState(item);
+      }); // Обработка события нажатия на иконки для изменения счетчика
+
+      $('['.concat(counterIcon, ']'), item).on('click', function(event) {
+        input.val($(event.currentTarget).index() + 1);
+        input.trigger('input');
+        updateState(item);
+      });
+    };
+
+    for (_iterator6.s(); !(_step6 = _iterator6.n()).done; ) {
+      _loop4();
+    }
+  } catch (err) {
+    _iterator6.e(err);
+  } finally {
+    _iterator6.f();
+  }
+}
+
+function getStickyOffset(exclude) {
+  var stickyElements = document.querySelectorAll('[sticky-clone]');
+  var offset = 0; // Вычисление высоты всех активных sticky элементов
+
+  var _iterator7 = _createForOfIteratorHelper(stickyElements),
+    _step7;
+
+  try {
+    for (_iterator7.s(); !(_step7 = _iterator7.n()).done; ) {
+      var el = _step7.value;
+
+      if (exclude !== el) {
+        offset += $(el).height();
+      }
+    }
+  } catch (err) {
+    _iterator7.e(err);
+  } finally {
+    _iterator7.f();
+  }
+
+  return offset;
+}
+
+function debounce(f, t) {
+  return function(args) {
+    var previousCall = this.lastCall;
+    this.lastCall = Date.now();
+
+    if (previousCall && this.lastCall - previousCall <= t) {
+      clearTimeout(this.lastCallTimer);
+    }
+
+    this.lastCallTimer = setTimeout(function() {
+      return f(args);
+    }, t);
+  };
 }
 
 $(function() {
   initTippy();
   svg4everybody();
-  initStickyHeader();
+  initSticky();
   initClamp();
   initMobileHeader();
   initAccordions();
@@ -344,4 +609,6 @@ $(function() {
   initSelect();
   initModals();
   initFileInputs();
+  initPageNavigation();
+  initInputCounter();
 });
