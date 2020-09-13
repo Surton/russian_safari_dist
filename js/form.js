@@ -22,7 +22,7 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
       };
     }
     throw new TypeError(
-      'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+      'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
     );
   }
   var normalCompletion = true,
@@ -105,9 +105,9 @@ function initCertificateVerification() {
               $(
                 '<div class="app-form-label app-form-label--error">'.concat(
                   error.message,
-                  '</div>',
-                ),
-              ),
+                  '</div>'
+                )
+              )
             );
           }
         } catch (err) {
@@ -127,8 +127,8 @@ function initCertificateVerification() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span>. Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span>. Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);
@@ -170,8 +170,8 @@ function initCertificateActivation() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span>. Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span>. Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);
@@ -207,8 +207,8 @@ function initQuestion() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);
@@ -266,8 +266,8 @@ function initReview() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);
@@ -309,8 +309,8 @@ function initCallMe() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);
@@ -364,8 +364,8 @@ function initReserve() {
           $('[form-submit]', form).removeAttr('disabled', 'true');
           errorContainer.append(
             $(
-              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>',
-            ),
+              '<div class="app-form-label app-form-label--error"><span class="p400b">Произошла ошибка</span><br>Заявка не отправлена, попробуйте еще раз</div>'
+            )
           );
           errorContainer.show();
         }, 2000);

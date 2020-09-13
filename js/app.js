@@ -22,7 +22,7 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
       };
     }
     throw new TypeError(
-      'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+      'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
     );
   }
   var normalCompletion = true,
@@ -256,8 +256,8 @@ function initSelect() {
     onChange: function onChange(value) {
       console.log(
         '\u0412\u044B\u0431\u0440\u0430\u043D\u043E \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435: '.concat(
-          value,
-        ),
+          value
+        )
       );
     },
     render: {
@@ -269,7 +269,7 @@ function initSelect() {
         if (icon) {
           result += '<svg class="app-select__icon"><use xlink:href="./img/sprite.svg#'.concat(
             icon,
-            '"></use></svg>',
+            '"></use></svg>'
           );
         }
 
@@ -297,11 +297,11 @@ function initTabs() {
         $('[tabs-content-item]', element).removeClass(tabActiveClass);
         $('[tabs-navigation-item]', element).removeClass(navigationActiveClass);
         $('[tabs-content-item][data-tab="'.concat(id, '"]'), element).addClass(
-          tabActiveClass,
+          tabActiveClass
         );
         $(
           '[tabs-navigation-item][data-tab="'.concat(id, '"]'),
-          element,
+          element
         ).addClass(navigationActiveClass);
       };
 
@@ -368,18 +368,18 @@ function initFileInputs() {
         '<label tabindex="0" for="'
           .concat(
             $(element).attr('id'),
-            '" class="app-input app-input-file-label" title="',
+            '" class="app-input app-input-file-label" title="'
           )
-          .concat($(element).attr('placeholder'), '"></label>'),
+          .concat($(element).attr('placeholder'), '"></label>')
       );
       var icon = $(
-        '<svg class="app-input-file-label__icon"><use xlink:href="./img/sprite.svg#attach"></use></svg>',
+        '<svg class="app-input-file-label__icon"><use xlink:href="./img/sprite.svg#attach"></use></svg>'
       );
       var placeholder = $(
         '<div class="app-input-file-label__placeholder">'.concat(
           $(element).attr('placeholder'),
-          '</div>',
-        ),
+          '</div>'
+        )
       );
       $(element).after(label);
       $(label).append(icon);
@@ -411,7 +411,7 @@ function initPageNavigation() {
   var pageNavigationAnchorAttr = 'page-navigation-anchor';
   var pageNavigationAttr = 'page-navigation';
   var anchors = document.querySelectorAll(
-    '['.concat(pageNavigationAnchorAttr, ']'),
+    '['.concat(pageNavigationAnchorAttr, ']')
   );
   var items = document.querySelectorAll('['.concat(pageNavigationAttr, ']'));
 
@@ -424,7 +424,7 @@ function initPageNavigation() {
         {
           scrollTop: scrollTop,
         },
-        callback,
+        callback
       );
     }
   };
@@ -438,9 +438,9 @@ function initPageNavigation() {
       '['.concat(pageNavigationAnchorAttr, '=').concat(target, ']'),
       function() {
         return scrollTo(
-          '['.concat(pageNavigationAnchorAttr, '=').concat(target, ']'),
+          '['.concat(pageNavigationAnchorAttr, '=').concat(target, ']')
         );
-      },
+      }
     );
   });
 
@@ -460,7 +460,7 @@ function initPageNavigation() {
 
     $('['.concat(pageNavigationAttr, ']')).removeClass('active');
     $('['.concat(pageNavigationAttr, '=').concat(current, ']')).addClass(
-      'active',
+      'active'
     );
   };
 
@@ -486,7 +486,7 @@ function initInputCounter() {
 
     if (placeholder && max) {
       $('['.concat(counterPlaceholder, ']'), counter).html(
-        placeholder.replace('{current}', value).replace('{max}', max),
+        placeholder.replace('{current}', value).replace('{max}', max)
       );
     }
 
