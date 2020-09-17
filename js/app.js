@@ -558,25 +558,69 @@ function initInputCounter() {
   }
 }
 
-function getStickyOffset(exclude) {
-  var stickyElements = document.querySelectorAll('[sticky-clone]');
-  var offset = 0; // Вычисление высоты всех активных sticky элементов
+function initDatePicker() {
+  var datePicker = 'datepicker';
+  var items = document.querySelectorAll('['.concat(datePicker, ']'));
 
-  var _iterator7 = _createForOfIteratorHelper(stickyElements),
+  var _iterator7 = _createForOfIteratorHelper(items),
     _step7;
 
   try {
     for (_iterator7.s(); !(_step7 = _iterator7.n()).done; ) {
-      var el = _step7.value;
+      var item = _step7.value;
+      var min = item.getAttribute('min-date');
+      var max = item.getAttribute('max-date');
+      datepicker(item, {
+        minDate: min ? new Date(min) : null,
+        maxDate: max ? new Date(max) : null,
+        showAllDates: true,
+        formatter: function formatter(input, date, instance) {
+          var value = $.format.date(date, 'dd.MM.yyyy');
+          input.value = value;
+        },
+        customDays: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+        customMonths: [
+          'Январь',
+          'Февраль',
+          'Март',
+          'Апрель',
+          'Май',
+          'Июнь',
+          'Июль',
+          'Август',
+          'Сентябрь',
+          'Октябрь',
+          'Ноябрь',
+          'Декабрь',
+        ],
+      });
+    }
+  } catch (err) {
+    _iterator7.e(err);
+  } finally {
+    _iterator7.f();
+  }
+}
+
+function getStickyOffset(exclude) {
+  var stickyElements = document.querySelectorAll('[sticky-clone]');
+  var offset = 0; // Вычисление высоты всех активных sticky элементов
+
+  var _iterator8 = _createForOfIteratorHelper(stickyElements),
+    _step8;
+
+  try {
+    for (_iterator8.s(); !(_step8 = _iterator8.n()).done; ) {
+      var el = _step8.value;
 
       if (exclude !== el) {
         offset += $(el).height();
       }
     }
   } catch (err) {
-    _iterator7.e(err);
+    _iterator8.e(err);
   } finally {
-    _iterator7.f();
+    _iterator8.f();
   }
 
   return offset;
@@ -611,4 +655,5 @@ $(function() {
   initFileInputs();
   initPageNavigation();
   initInputCounter();
+  initDatePicker();
 });

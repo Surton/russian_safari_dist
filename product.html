@@ -329,7 +329,7 @@
       <div class="wrapper wrapper--no-mobile-margin">
         <div page-navigation-anchor="description" class="app-product__container">
           <div class="app-product__description app-product__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</div>
-          <form class="app-form app-form--card app-product-form app-product__item">
+          <form product-section-form="" class="app-form app-form--card app-product-form app-product__item">
             <div class="app-form-row">
               <div class="app-price h900">
                 <div class="app-price__current app-price__item">16 500 ₽</div>
@@ -615,117 +615,46 @@
               </div>
             </div>
           </form>
-          <div app-modal="" class="app-modal" id="reserve">
-            <div data-micromodal-close="" class="app-modal__overlay" tabindex="-1">
-              <div class="app-modal__container" style="width: 580px;" role="dialog" aria-modal="true">
-                <header class="app-modal__header">
-                  <div class="app-modal__title">Забронировать</div>
-                  <button app-modal-close="" class="app-modal-close">
-                    <svg class="app-modal-close__icon">
-                      <use xlink:href="./img/sprite.svg#close-box"></use>
-                    </svg>
-                  </button>
-                </header>
-                <main class="app-modal__content">
-                  <form form-reserve="" class="app-form app-form--center">
-                    <div class="app-form-row">
-                      <div class="app-form-column">
-                        <div class="app-certificate-card ">
-                          <div class="app-certificate-card__content">
-                            <div class="app-certificate-card__image" style="background-image: url(img/mocks/equipments/equipment.jpg)"></div>
-                            <div class="app-certificate-card-info">
-                              <div class="app-certificate-card-info__title">Сафари на БРДМ-2</div>
-                              <div class="app-certificate-card-info__price">
-                                <div class="app-price ">
-                                  <div class="app-price__current app-price__item">16 500 ₽</div>
-
-                                  <div class="app-price__old app-price__item">19 000 ₽</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="app-iconed-content app-iconed-content--wide-margin color-8 p400">
-                        <svg class="app-iconed-content__icon color-7" style="width: 20px; height: 20px">
-                          <use xlink:href="./img/sprite.svg#hi-human"></use>
-                        </svg>
-                        <span class="app-iconed-content__content">В бронировании военной техники есть необходимость уточнения деталей, отправьте нам свои данные и наш менеджер свяжется.</span>
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="app-form-column" style="max-width: 360px">
-                        <input name="name" type="text" class="app-input" placeholder="Ваше имя">
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="app-form-column" style="max-width: 360px">
-                        <input name="phone" type="text" class="app-input" placeholder="Телефон" id="form-reserve-phone">
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="app-form-column" style="max-width: 360px">
-                        <input name="email" type="text" class="app-input" placeholder="Электронная почта" id="form-reserve-email">
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="app-form-column">
-                        <textarea name="comment" rows="5" class="app-input" placeholder="Комментарий, необязательно"></textarea>
-                      </div>
-                    </div>
-                    <div form-error="" class="app-form-row"></div>
-                    <div class="app-form-row">
-                      <div class="app-buttons">
-                        <button form-submit="" type="submit" class="app-button-base app-button-primary app-buttons__item h200">
-                          <span>Отправить заявку</span>
-                          <div class="app-loader app-button__loader">
-                            <svg class="app-loader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                              <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
-                              </path>
-                            </svg>
-                          </div>
-                        </button>
-                        <button app-modal-close="" type="button" class="app-button-base app-button-light app-buttons__item h200">Отменить</button>
-                      </div>
-                    </div>
-                    <div class="app-form-row">
-                      <div class="p300 app-form-privacy">Отправляя заявку, вы соглашаетесь с <a href="#" class="app-form-privacy__link">политикой конфиденциальности</a></div>
-                    </div>
-                  </form>
-                </main>
-              </div>
-            </div>
-          </div>
           <div class="app-product-info app-product__item">
             <div class="app-product-info__item">
               <div class="app-product-info__title">Что включено</div>
-              <div class="app-included ">
+              <div class="app-included " styles="max-width: 400px">
                 <div class="app-included__container">
 
                   <div class="app-included-item">
+
                     <div class="app-included-item__counter">1</div>
                     <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-3.jpg')"></div>
-                    <div class="app-included-item__description">Сафари на БРДМ-2</div>
+                    <div class="app-included-item-description">
+                      <div class="app-included-item-description__item">Сафари на БРДМ-2</div>
+                    </div>
                   </div>
 
                   <div class="app-included-item">
+
                     <div class="app-included-item__counter">2</div>
                     <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-1.jpg')"></div>
-                    <div class="app-included-item__description">«Боевые 100 грамм», тушенка, сэндвичи, соления, чай, пряники</div>
+                    <div class="app-included-item-description">
+                      <div class="app-included-item-description__item">«Боевые 100 грамм», тушенка, сэндвичи, соления, чай, пряники</div>
+                    </div>
                   </div>
 
                   <div class="app-included-item">
+
                     <div class="app-included-item__counter">3</div>
                     <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-2.jpg')"></div>
-                    <div class="app-included-item__description">Полевая форма на время мероприятия</div>
+                    <div class="app-included-item-description">
+                      <div class="app-included-item-description__item">Полевая форма на время мероприятия</div>
+                    </div>
                   </div>
 
                   <div class="app-included-item">
+
                     <div class="app-included-item__counter">4</div>
                     <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included.jpg')"></div>
-                    <div class="app-included-item__description">Стрельбы из двух видов оружия: АКМ и ПМ</div>
+                    <div class="app-included-item-description">
+                      <div class="app-included-item-description__item">Стрельбы из двух видов оружия: АКМ и ПМ</div>
+                    </div>
                   </div>
 
                 </div>

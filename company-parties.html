@@ -280,7 +280,7 @@
     </div>
   </header>
   <main class="app-main">
-    <div class="app-page-header app-page-header--image" style="background-image: url(img/covers/cover-2.jpg)">
+    <div class="app-page-header app-page-header--image" style="background-image: url(img/covers/cover-4.jpg)">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
           <div class="app-breadcrumbs-crumbs">
@@ -298,6 +298,407 @@
         <div class="app-page-header__separator"></div>
       </div>
     </div>
+    <section sticky="" data-id="page-navigation" class="app-page-navigation">
+      <div class="app-page-navigation__container wrapper">
+        <nav class="app-page-navigation__nav">
+          <a page-navigation="description" class="app-page-navigation__item">Описание и заявка</a>
+          <a page-navigation="gallery" class="app-page-navigation__item">Галерея</a>
+          <a page-navigation="details" class="app-page-navigation__item">Подробности</a>
+          <a page-navigation="reviews" data-count="42" class="app-page-navigation__item">Отзывы</a>
+          <a page-navigation="q-and-a" class="app-page-navigation__item">Вопросы и ответы</a>
+        </nav>
+      </div>
+    </section>
+    <section class="app-main__margin app-product">
+      <div class="wrapper wrapper--no-mobile-margin">
+        <div page-navigation-anchor="description" class="app-product__container">
+          <div class="app-product__description app-product__item p500">О поездке на танке наверняка мечтали многие, а у Вас есть уникальная возможность воплотить мечту в реальность. В составе экипажа боевой машины, на специальной трассе полигона, вы сможете почувствовать себя настоящими танкистами. Воплотить мечту в реальность. О там как это воплотить позаботимся мы, мы опытные и располагаем своей бронетехникой, и не допускам ошибки новичков.</div>
+          <form form-corporate="" class="app-form app-form--card app-product-form app-product__item">
+            <div class="app-form-title app-form-row">Заявка на корпоратив</div>
+            <div class="app-form-row">
+              <div class="app-form-label p400b">Количество участников</div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-row__item">
+                <div app-input-counter="" class="app-input-counter">
+                  <div class="app-input-counter__container">
+                    <button app-input-counter-minus="" type="button" class="app-input-counter__button">–</button>
+                    <input app-input-counter-input="" min="1" class="app-input-counter__input" type="number" style="width: 85px;" disabled="">
+                    <div app-input-counter-placeholder="" class="app-input-counter__placeholder" style="width: 100px;"></div>
+                    <button app-input-counter-plus="" type="button" class="app-input-counter__button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="app-form-row__item app-form-row__item--grow">
+                <div class="app-form-column">
+                  <div class="app-input-container app-input-container--right-icon">
+                    <input datepicker="" min-date="09-17-2020" name="date" type="text" class="app-input" autocomplete="off" readonly="" placeholder="Дата">
+                    <svg class="app-input-icon app-input-icon--right">
+                      <use xlink:href="./img/sprite.svg#calendar"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column">
+                <input name="name" type="text" class="app-input" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-column">
+                <input name="company" type="text" class="app-input" placeholder="Компания">
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-row__item">
+                <div class="app-form-column">
+                  <input id="form-corporate-phone" name="phone" type="text" class="app-input" placeholder="Телефон">
+                </div>
+              </div>
+              <div class="app-form-row__item app-form-row__item--grow">
+                <div class="app-form-column">
+                  <input id="form-corporate-email" name="email" type="text" class="app-input" placeholder="Электронная почта">
+                </div>
+              </div>
+            </div>
+            <div class="app-form-row">
+              <textarea name="comment" rows="5" class="app-input app-input--slim" placeholder="Комментарии и пожелания, необязательно"></textarea>
+            </div>
+            <div class="app-form-row">
+              <div class="app-form-label p400b">Дополнительно</div>
+            </div>
+            <div class="app-form-row">
+              <div class="app-for-column">
+                <label class="app-input-checkbox">
+                  <span class="app-input-checkbox__label">Форма-сувенир</span>
+                  <input type="checkbox" name="spam" class="app-input-checkbox__input">
+                  <span class="app-input-checkbox__checkmark"></span>
+                  <div class="app-description app-input-checkbox__label">
+                    <div description-popover="description-2" class="app-description-icon">
+                      <svg class="app-description-icon__svg">
+                        <use xlink:href="./img/sprite.svg#help"></use>
+                      </svg>
+                    </div>
+
+                    <div class="app-description__text">+2 400 ₽</div>
+                    <div style="display: none;">
+                      <div id="description-2">
+                        <div class="app-description-popover">
+                          <header class="app-description-popover__header">
+                            <div class="app-description-popover__title">Форма-сувенир</div>
+                            <button description-popover-close="" class="app-description-popover-close">
+                              <svg class="app-description-popover-close__icon">
+                                <use xlink:href="./img/sprite.svg#close-box"></use>
+                              </svg>
+                            </button>
+                          </header>
+                          <main class="app-description-popover__content">
+                            <p class="p400 color-1">Бронированная разведывательно- дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</p>
+                            <p>
+                              <img src="img/mocks/popover/popover.jpg" alt="Форма-сувенир" style="width: 100%">
+                            </p>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label class="app-input-checkbox">
+                  <span class="app-input-checkbox__label">Трансфер</span>
+                  <input type="checkbox" name="spam" class="app-input-checkbox__input">
+                  <span class="app-input-checkbox__checkmark"></span>
+                  <div class="app-description app-input-checkbox__label">
+                    <div description-popover="description-3" class="app-description-icon">
+                      <svg class="app-description-icon__svg">
+                        <use xlink:href="./img/sprite.svg#help"></use>
+                      </svg>
+                    </div>
+
+                    <div class="app-description__text">+1 200 ₽</div>
+                    <div style="display: none;">
+                      <div id="description-3">
+                        <div class="app-description-popover">
+                          <header class="app-description-popover__header">
+                            <div class="app-description-popover__title">Форма-сувенир</div>
+                            <button description-popover-close="" class="app-description-popover-close">
+                              <svg class="app-description-popover-close__icon">
+                                <use xlink:href="./img/sprite.svg#close-box"></use>
+                              </svg>
+                            </button>
+                          </header>
+                          <main class="app-description-popover__content">
+                            <p class="p400 color-1">Бронированная разведывательно- дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</p>
+                            <p>
+                              <img src="img/mocks/popover/popover.jpg" alt="Форма-сувенир" style="width: 100%">
+                            </p>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label class="app-input-checkbox">
+                  <span class="app-input-checkbox__label">Фотосъемка</span>
+                  <input type="checkbox" name="spam" class="app-input-checkbox__input">
+                  <span class="app-input-checkbox__checkmark"></span>
+                  <div class="app-description app-input-checkbox__label">
+                    <div description-popover="description-4" class="app-description-icon">
+                      <svg class="app-description-icon__svg">
+                        <use xlink:href="./img/sprite.svg#help"></use>
+                      </svg>
+                    </div>
+
+                    <div class="app-description__text">+2 300 ₽</div>
+                    <div style="display: none;">
+                      <div id="description-4">
+                        <div class="app-description-popover">
+                          <header class="app-description-popover__header">
+                            <div class="app-description-popover__title">Форма-сувенир</div>
+                            <button description-popover-close="" class="app-description-popover-close">
+                              <svg class="app-description-popover-close__icon">
+                                <use xlink:href="./img/sprite.svg#close-box"></use>
+                              </svg>
+                            </button>
+                          </header>
+                          <main class="app-description-popover__content">
+                            <p class="p400 color-1">Бронированная разведывательно- дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</p>
+                            <p>
+                              <img src="img/mocks/popover/popover.jpg" alt="Форма-сувенир" style="width: 100%">
+                            </p>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label class="app-input-checkbox">
+                  <span class="app-input-checkbox__label">Видеосъемка</span>
+                  <input type="checkbox" name="spam" class="app-input-checkbox__input">
+                  <span class="app-input-checkbox__checkmark"></span>
+                  <div class="app-description app-input-checkbox__label">
+                    <div description-popover="description-5" class="app-description-icon">
+                      <svg class="app-description-icon__svg">
+                        <use xlink:href="./img/sprite.svg#help"></use>
+                      </svg>
+                    </div>
+
+                    <div class="app-description__text">+3 500 ₽</div>
+                    <div style="display: none;">
+                      <div id="description-5">
+                        <div class="app-description-popover">
+                          <header class="app-description-popover__header">
+                            <div class="app-description-popover__title">Форма-сувенир</div>
+                            <button description-popover-close="" class="app-description-popover-close">
+                              <svg class="app-description-popover-close__icon">
+                                <use xlink:href="./img/sprite.svg#close-box"></use>
+                              </svg>
+                            </button>
+                          </header>
+                          <main class="app-description-popover__content">
+                            <p class="p400 color-1">Бронированная разведывательно- дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</p>
+                            <p>
+                              <img src="img/mocks/popover/popover.jpg" alt="Форма-сувенир" style="width: 100%">
+                            </p>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <label class="app-input-checkbox">
+                  <span class="app-input-checkbox__label">Раздавить машину</span>
+                  <input type="checkbox" name="spam" class="app-input-checkbox__input">
+                  <span class="app-input-checkbox__checkmark"></span>
+                  <div class="app-description app-input-checkbox__label">
+                    <div description-popover="description-6" class="app-description-icon">
+                      <svg class="app-description-icon__svg">
+                        <use xlink:href="./img/sprite.svg#help"></use>
+                      </svg>
+                    </div>
+
+                    <div class="app-description__text">+9 900 ₽</div>
+                    <div style="display: none;">
+                      <div id="description-6">
+                        <div class="app-description-popover">
+                          <header class="app-description-popover__header">
+                            <div class="app-description-popover__title">Форма-сувенир</div>
+                            <button description-popover-close="" class="app-description-popover-close">
+                              <svg class="app-description-popover-close__icon">
+                                <use xlink:href="./img/sprite.svg#close-box"></use>
+                              </svg>
+                            </button>
+                          </header>
+                          <main class="app-description-popover__content">
+                            <p class="p400 color-1">Бронированная разведывательно- дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</p>
+                            <p>
+                              <img src="img/mocks/popover/popover.jpg" alt="Форма-сувенир" style="width: 100%">
+                            </p>
+                          </main>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div form-error="" class="app-form-row"></div>
+            <div class="app-form-row">
+              <div class="app-buttons">
+                <button form-submit="" type="submit" class="app-button-base app-button-primary app-buttons__item h200">
+                  <span>Отправить заявку</span>
+                  <div class="app-loader app-button__loader">
+                    <svg class="app-loader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="app-form-row">
+              <div class="p300 app-form-privacy">Отправляя заявку, вы соглашаетесь с <a href="#" class="app-form-privacy__link">политикой конфиденциальности</a></div>
+            </div>
+          </form>
+          <div class="app-product-info app-product__item">
+            <div class="app-product-info__item">
+              <div class="app-product-info__title">Что входит в корпоратив</div>
+              <div included-slider="" class="swiper-container app-included-slider">
+                <div class="swiper-wrapper app-included__container">
+
+                  <div class="swiper-slide app-included-item">
+                    <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-3.jpg')"></div>
+                    <div class="app-included-item-description">
+
+                      <div class="app-included-item-description__item h200">Сафари на танке или бронетранспортере</div>
+                      <div class="app-included-item-description__item">Это то — о чем мечтали многие, прокатиться на многотонной боевой машине, ощутить всю мощь и силу бронетанковой техники!</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide app-included-item">
+                    <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-1.jpg')"></div>
+                    <div class="app-included-item-description">
+
+                      <div class="app-included-item-description__item h200">Полевая форма на время мероприятия</div>
+                      <div class="app-included-item-description__item">Для полного пргружения в процесс и эффектных фотографий для каждого участника мы предоставляем полевую форму.</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide app-included-item">
+                    <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included-2.jpg')"></div>
+                    <div class="app-included-item-description">
+
+                      <div class="app-included-item-description__item h200">Боевые стрельбы</div>
+                      <div class="app-included-item-description__item">Боевые стрельбы из охолощенного АК-74 помогут полностью погрузится в армейскую атмосферу</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide app-included-item">
+                    <div class="app-included-item__preview" style="background-image: url('img/mocks/included/included.jpg')"></div>
+                    <div class="app-included-item-description">
+
+                      <div class="app-included-item-description__item h200">Полевая кухня</div>
+                      <div class="app-included-item-description__item">Вкусная полевая кухня, которая не оставит равнодушной никого, ведь изготовленная полевая каша по секретному рецепту это лучшее, что может быть в полевой обстановке!</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <script defer="" src="./js/included.slider.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="app-benefits app-main__margin">
+      <div class="wrapper wrapper--no-mobile-margin">
+        <div benefits-slider="" class="swiper-container app-benefits__slider">
+          <div class="swiper-wrapper app-benefits__wrapper">
+
+            <div class="swiper-slide app-benefits-slide">
+              <svg class="app-benefits-slide__icon app-benefits-slide__item">
+                <use xlink:href="./img/sprite.svg#thumbs-up"></use>
+              </svg>
+              <div class="app-benefits-slide__title app-benefits-slide__item">Гарантия лучшей цены</div>
+              <div class="app-benefits-slide__description app-benefits-slide__item">У нас своя бронетехника и реквизит</div>
+            </div>
+
+            <div class="swiper-slide app-benefits-slide">
+              <svg class="app-benefits-slide__icon app-benefits-slide__item">
+                <use xlink:href="./img/sprite.svg#soldier"></use>
+              </svg>
+              <div class="app-benefits-slide__title app-benefits-slide__item">Работаем с 2010 года</div>
+              <div class="app-benefits-slide__description app-benefits-slide__item">Более 5000 клиентов. Не делаем ошибок, как новички</div>
+            </div>
+
+            <div class="swiper-slide app-benefits-slide">
+              <svg class="app-benefits-slide__icon app-benefits-slide__item">
+                <use xlink:href="./img/sprite.svg#map"></use>
+              </svg>
+              <div class="app-benefits-slide__title app-benefits-slide__item">Ближе всех от Москвы</div>
+              <div class="app-benefits-slide__description app-benefits-slide__item">Наш полигон находится всего в 20 минутах езды от Москвы</div>
+            </div>
+
+            <div class="swiper-slide app-benefits-slide">
+              <svg class="app-benefits-slide__icon app-benefits-slide__item">
+                <use xlink:href="./img/sprite.svg#medal"></use>
+              </svg>
+              <div class="app-benefits-slide__title app-benefits-slide__item">100% гарантия качества</div>
+              <div class="app-benefits-slide__description app-benefits-slide__item">Если услуга не понравится, вернем деньги без лишних разговоров</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-pagination app-benefits__pagination"></div>
+      </div>
+    </section>
+    <script defer="" src="./js/benefits.slider.js"></script>
+    <section class="app-companies app-section app-main__margin">
+      <div class="wrapper">
+        <div class="app-section-title ">
+          <div class="app-section-title__text app-section-title__item">Уже доверили нам свой отдых</div>
+        </div>
+        <div class="app-section-header">
+          <div class="app-section-description app-section-header__item">
+            <div class="app-section-description__text">Более 500 проведенных мероприятий с 2009 года.</div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper wrapper--no-mobile-margin">
+        <div class="app-companies__container">
+          <div companies-slider="" class="swiper-container app-companies__slider">
+            <div class="swiper-wrapper app-companies__wrapper">
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-1.png" class="app-companies__image">
+              </div>
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-2.png" class="app-companies__image">
+              </div>
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-3.png" class="app-companies__image">
+              </div>
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-4.png" class="app-companies__image">
+              </div>
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-5.png" class="app-companies__image">
+              </div>
+
+              <div class="swiper-slide app-companies__slide">
+                <img src="img/mocks/companies/company-6.png" class="app-companies__image">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer="" src="./js/companies.slider.js"></script>
     <section page-navigation-anchor="gallery" class="app-gallery app-main__margin">
       <div class="wrapper wrapper--no-mobile-margin">
         <div class="app-gallery__container">
@@ -454,13 +855,164 @@
             </div>
           </div>
         </div>
-
-        <div class="app-gallery-buttons">
-          <a href="#" class="app-button-base app-button-secondary app-gallery-buttons__item">Смотреть все альбомы</a>
-        </div>
       </div>
     </section>
     <script defer="" src="./js/gallery.slider.js"></script>
+    <section page-navigation-anchor="details" class="app-main__margin app-section">
+      <div class="wrapper">
+        <div class="app-section-title ">
+          <div class="app-section-title__text app-section-title__item">Подробности</div>
+        </div>
+        <div class="app-accordion-container">
+          <div accordion="" class="app-accordion">
+            <div accordion-header="" class="app-accordion__header">
+              <div class="app-accordion__icon">
+                <svg class="color-7">
+                  <use xlink:href="./img/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="app-accordion__title">Программа и график</div>
+              <div class="app-accordion-state app-accordion__icon">
+                <svg class="app-accordion-state__open">
+                  <use xlink:href="./img/sprite.svg#add-circle"></use>
+                </svg>
+                <svg class="app-accordion-state__collapse">
+                  <use xlink:href="./img/sprite.svg#close-highlight-off"></use>
+                </svg>
+              </div>
+            </div>
+            <div accordion-main="" class="app-accordion-main">
+              <div class="app-article app-accordion-main__article">
+                <div class="app-article__container">
+                  <div class="app-article__wrapper">
+                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div accordion="" class="app-accordion">
+            <div accordion-header="" class="app-accordion__header">
+              <div class="app-accordion__icon">
+                <svg class="color-7">
+                  <use xlink:href="./img/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="app-accordion__title">Где катаемся</div>
+              <div class="app-accordion-state app-accordion__icon">
+                <svg class="app-accordion-state__open">
+                  <use xlink:href="./img/sprite.svg#add-circle"></use>
+                </svg>
+                <svg class="app-accordion-state__collapse">
+                  <use xlink:href="./img/sprite.svg#close-highlight-off"></use>
+                </svg>
+              </div>
+            </div>
+            <div accordion-main="" class="app-accordion-main app-accordion-main--center">
+              <div class="app-contacts app-contacts--red-icon app-contacts--wide-icon-margin p600 app-tabs-content-tab__item">
+
+                <div class="app-contacts-item">
+                  <svg class="app-contacts-item__icon app-contacts-item__item">
+                    <use xlink:href="./img/sprite.svg#location"></use>
+                  </svg>
+
+                  <span class="app-contacts-item__contact">Московская область, Солнечногорский район, Деревня Кочугино</span>
+                </div>
+
+              </div>
+              <div class="app-map" style="height: 480px; width: 100% ">
+                <iframe class="app-map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0ac915ef1c3044450ae519221958d9f7f3a0c7b4fad80ca4525886d938de51fa&amp;amp;source=constructor" frameborder="0" width="100%" height="100%"></iframe>
+              </div>
+            </div>
+          </div>
+          <div accordion="" class="app-accordion">
+            <div accordion-header="" class="app-accordion__header">
+              <div class="app-accordion__icon">
+                <svg class="color-7">
+                  <use xlink:href="./img/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <div class="app-accordion__title">О БРДМ-2</div>
+              <div class="app-accordion-state app-accordion__icon">
+                <svg class="app-accordion-state__open">
+                  <use xlink:href="./img/sprite.svg#add-circle"></use>
+                </svg>
+                <svg class="app-accordion-state__collapse">
+                  <use xlink:href="./img/sprite.svg#close-highlight-off"></use>
+                </svg>
+              </div>
+            </div>
+            <div accordion-main="" class="app-accordion-main app-accordion-main--center">
+              <div class="app-article app-accordion-main__article">
+                <div class="app-article__container">
+                  <div class="app-article__wrapper app-article__wrapper--680">
+                    <p class="p400">БРДМ-2 – мощная военная машина, которая стоит на вооружении российской армии, это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу. На скорости до 100 км/ч броневик легко преодолевает сугробы, глубокие овраги, лихо переезжает траншеи и канавы. Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику, эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                    <p class="app-article-media-container">
+                      <img src="img/mocks/article/article-1.jpg" alt="БРДМ-2" class="app-article-media-container__media">
+                      <span class="app-article-media-container__description">Машина принимала участие во вторжении войск стран ВД в Чехословакию</span>
+                    </p>
+                    <p class="p400">БРДМ-2 многие годы использовалась советской армией, эту машину поставляли всем странам-участницам Варшавского договора и активно экспортировали за его пределы. Так что послужной список у БРДМ-2 весьма солидный. БРДМ-2 стала героем одного из крупнейших сражений войны Судного дня. 6 октября 1973 года армия Египта форсировала Суэцкий канал и была встречена израильской бронетанковой дивизией. С помощью ПТРК «Малютка», установленных на БРДМ-2, были уничтожены более 150 танков М48 и М60. Не менее успешно применялись БРДМ-2 с ПТРК против израильских танков и в Сирии</p>
+                    <div class="app-article__margin">
+                      <table class="app-table p400">
+                        <caption>Технические характеристики</caption>
+                        <tr>
+                          <td class="app-table-light">Масса, т</td>
+                          <td>7,0</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Экипаж, чел</td>
+                          <td>4</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Вооружение</td>
+                          <td>7,62-мм ПКТ и 14,5-мм КПВТ</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Длина, мм</td>
+                          <td>5750</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Ширина, мм</td>
+                          <td>2350</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Высота, мм</td>
+                          <td>2395</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Толщина брони, мм</td>
+                          <td>от 7 до 10</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Двигатель</td>
+                          <td>ГАЗ-41</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Мощность двигателя, л. с.</td>
+                          <td>140</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Макс. скорость по шоссе, км/ч</td>
+                          <td>до 100</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Макс. скорость на плаву, км/ч</td>
+                          <td>8-10</td>
+                        </tr>
+                        <tr>
+                          <td class="app-table-light">Запас хода по шоссе, км</td>
+                          <td>до 750</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section page-navigation-anchor="reviews" class="app-reviews app-section app-main__margin">
       <div class="wrapper">
         <div class="app-section-header app-reviews__header">
@@ -547,8 +1099,7 @@
       </div>
     </section>
     <script defer="" src="./js/reviews.slider.js"></script>
-
-    <section class="app-main__margin app-section">
+    <section page-navigation-anchor="q-and-a" class="app-main__margin app-section">
       <div class="wrapper">
         <div class="app-section-title ">
           <div class="app-section-title__text app-section-title__item">Вопросы и ответы</div>
@@ -726,7 +1277,6 @@
         </div>
       </div>
     </section>
-
     <section class="app-banners app-main__margin">
       <div class="wrapper">
         <div class="app-banners__container">
