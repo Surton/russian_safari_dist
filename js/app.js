@@ -138,45 +138,48 @@ function initSticky() {
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done; ) {
         var el = _step.value;
-        var id = $(el).attr('data-id');
-        var clone = document.getElementById(id);
-        var offset = getStickyOffset(clone);
+        // Получаем идентификатор, который будет присвоен клону
+        var id = $(el).attr('data-id'); // Ищем существующего клона
 
-        if (window.pageYOffset + offset < el.offsetTop) {
-          // Удаляем sticky-клона, если дошли до исходного элемента
-          if (clone) {
-            $(el)
-              .css({
-                visibility: 'visible',
-              })
-              .attr('data-stickied', false)
-              .scrollLeft($(clone).scrollLeft())
-              .scrollTop($(clone).scrollTop());
-            $(clone).remove();
-          }
-        } else if (!clone) {
-          // Добавляем sticky-клона, прячем исходный элемент
+        var clone = document.getElementById(id); // Получаем отступ, который будет необходимо добавить новому sticky-элементу
+
+        var offset = getStickyOffset(el); // Если клон есть, то offsetTop нужно проверять у него, т.к он находится на месте основного элемента
+
+        var offsetTop = clone ? clone.offsetTop : el.offsetTop; // При перемещении элемента по DOM-дереву теряются позиции скролла, поэтому сохраняем их перед перемещением
+
+        var scrollLeft = $(el).scrollLeft();
+        var scrollTop = $(el).scrollTop();
+
+        if (window.pageYOffset + offset < offsetTop) {
+          // Удаляем клона, если дошли до него
           $(el)
-            .clone({
-              withDataAndEvents: true,
-              deepWithDataAndEvents: true,
+            .removeClass('sticky')
+            .removeAttr('style')
+            .insertAfter(clone)
+            .scrollLeft(scrollLeft)
+            .scrollTop(scrollTop);
+          $(clone).remove();
+        } else if (!clone) {
+          // Добавляем клона, помещаем исходный элемент в body
+          $(el)
+            .clone()
+            .css({
+              visibility: 'hidden',
             })
-            .appendTo('body')
             .attr('id', id)
             .removeAttr('sticky')
             .removeAttr('data-id')
             .attr('sticky-clone', '')
+            .attr('data-stickied', true)
+            .insertAfter(el);
+          $(el)
             .addClass('sticky')
             .css({
               top: offset,
             })
-            .scrollLeft($(el).scrollLeft())
-            .scrollTop($(el).scrollTop());
-          $(el)
-            .css({
-              visibility: 'hidden',
-            })
-            .attr('data-stickied', true);
+            .appendTo('body')
+            .scrollLeft(scrollLeft)
+            .scrollTop(scrollTop);
         }
       }
     } catch (err) {
@@ -603,7 +606,7 @@ function initDatePicker() {
 }
 
 function getStickyOffset(exclude) {
-  var stickyElements = document.querySelectorAll('[sticky-clone]');
+  var stickyElements = document.querySelectorAll('.sticky[sticky]');
   var offset = 0; // Вычисление высоты всех активных sticky элементов
 
   var _iterator8 = _createForOfIteratorHelper(stickyElements),

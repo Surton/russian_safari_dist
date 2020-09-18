@@ -2581,7 +2581,7 @@
 }
 
 .app-modal {
-  z-index: 30000;
+  z-index: 10000;
   position: relative;
   display: none;
 }
@@ -2842,7 +2842,7 @@
   overflow-y: hidden;
 }
 .app-page-navigation.sticky {
-  z-index: 10000;
+  z-index: 1000;
   position: fixed;
   left: 0;
   border-bottom: 1px solid #e5e8df;
@@ -3935,7 +3935,7 @@
   min-width: 320px;
 }
 .app-header.sticky {
-  z-index: 10000;
+  z-index: 1100;
   position: fixed;
   left: 0;
 }
@@ -4118,7 +4118,7 @@
   outline: none;
 }
 .app-header-mobile {
-  z-index: 20000;
+  z-index: 2000;
   position: fixed;
   display: none;
   -ms-flex-direction: column;
