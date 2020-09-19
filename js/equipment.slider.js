@@ -26,5 +26,5 @@ $(function() {
       },
     },
   };
-  var intro = new Swiper('[equipment-slider]', options);
+  var slider = new Swiper('[equipment-slider]', options);
 });

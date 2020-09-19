@@ -22,5 +22,5 @@ $(function() {
       },
     },
   };
-  var intro = new Swiper('[instagram-slider]', options);
+  var slider = new Swiper('[instagram-slider]', options);
 });

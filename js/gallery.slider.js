@@ -32,5 +32,5 @@ $(function() {
       slideThumbActiveClass: 'app-gallery-thumbs__item--active',
     },
   };
-  var gallery = new Swiper('[gallery-slider]', galleryOptions);
+  var slider = new Swiper('[gallery-slider]', galleryOptions);
 });

@@ -25,5 +25,5 @@ $(function() {
       el: '.app-benefits__pagination',
     },
   };
-  var intro = new Swiper('[benefits-slider]', options);
+  var slider = new Swiper('[benefits-slider]', options);
 });

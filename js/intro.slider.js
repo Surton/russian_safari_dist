@@ -21,5 +21,5 @@ $(function() {
       },
     },
   };
-  var intro = new Swiper('[intro-slider]', options);
+  var slider = new Swiper('[intro-slider]', options);
 });

@@ -298,7 +298,73 @@
         <div class="app-page-header__separator"></div>
       </div>
     </div>
-    <section class="app-gift-baskets app-section app-main__margin">
+    <section sticky="" data-id="page-navigation" class="app-page-navigation">
+      <div class="app-page-navigation__container wrapper">
+        <nav class="app-page-navigation__nav">
+          <a page-navigation="description" class="app-page-navigation__item">Описание</a>
+          <a page-navigation="gift-baskets" class="app-page-navigation__item">Подарочные наборы</a>
+          <a page-navigation="equipment-certificate" class="app-page-navigation__item">Сертификаты</a>
+          <a page-navigation="obtaining" class="app-page-navigation__item">Способы получения</a>
+          <a page-navigation="q-and-a" class="app-page-navigation__item">Вопросы и ответы</a>
+        </nav>
+      </div>
+    </section>
+    <section class="app-main__margin app-product">
+      <div class="wrapper wrapper--no-mobile-margin">
+        <div page-navigation-anchor="description" class="app-product__container" style="padding-right: 780px;">
+          <div class="app-product__description app-product__item">Это идеальный подарок не только для мужчин, но и женщин. Сертификат на поездку на танке подойдет всем, кому интересен драйв и острые ощущения. В программе мероприятия также могут принять участие дети от 6 лет в сопровождении взрослых.</div>
+          <div class="app-product-preview app-product__item" style="width: 680px;">
+            <img src="img/certificate.png" alt="Подарочный сертификат">
+          </div>
+          <div class="app-product-benefits">
+            <div class="app-iconed-content app-iconed-content--wide-margin color-1 p400 app-product-benefits__item">
+              <svg class="app-iconed-content__icon color-7" style="width: 20px; height: 20px;">
+                <use xlink:href="./img/sprite.svg#calendar"></use>
+              </svg>
+              <span class="app-iconed-content__content">Можно выбрать удобное для вас время, сертификат действует целый год</span>
+            </div>
+            <div class="app-iconed-content app-iconed-content--wide-margin color-1 p400 app-product-benefits__item">
+              <svg class="app-iconed-content__icon color-7" style="width: 20px; height: 20px;">
+                <use xlink:href="./img/sprite.svg#smile"></use>
+              </svg>
+              <span class="app-iconed-content__content">Оригинальный подарок, впечатления гарантированы</span>
+            </div>
+            <div class="app-iconed-content app-iconed-content--wide-margin color-1 p400 app-product-benefits__item">
+              <svg class="app-iconed-content__icon color-7" style="width: 20px; height: 20px;">
+                <use xlink:href="./img/sprite.svg#fire"></use>
+              </svg>
+              <span class="app-iconed-content__content">Танки это просто крутая тема</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="app-certificate-question app-main__margin">
+      <div class="wrapper app-certificate-question__wrapper">
+        <div class="app-certificate-question-content">
+          <div class="app-certificate-question-content__item">Вам подарили сертификат?</div>
+          <div class="app-certificate-question-content__icon">
+            <svg>
+              <use xlink:href="./img/sprite.svg#tank-2"></use>
+            </svg>
+          </div>
+          <div class="app-certificate-question-content__item">
+            <a href="#" class="app-link app-link--gold">
+              Проверить и активировать
+              <svg style="width: 0.5em; height: 0.5em">
+                <use xlink:href="./img/sprite.svg#chevron-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="app-certificate-question__icon">
+          <svg>
+            <use xlink:href="./img/sprite.svg#tank-2"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <section page-navigation-anchor="gift-baskets" class="app-gift-baskets app-section app-main__margin">
       <div class="wrapper">
         <div class="app-section-title ">
           <div class="app-section-title__text app-section-title__item">Подарочные наборы</div>
@@ -617,10 +683,18 @@
       </div>
     </section>
     <script defer="" src="./js/gift-baskets.slider.js"></script>
-    <section class="app-equipment app-section app-main__margin">
+    <section page-navigation-anchor="equipment-certificate" class="app-equipment app-section app-main__margin">
       <div class="wrapper">
         <div class="app-section-title ">
-          <div class="app-section-title__text app-section-title__item">Наша техника</div>
+          <div class="app-section-title__text app-section-title__item">Сертификат на конкретную машину</div>
+        </div>
+        <div class="app-section-header">
+          <div class="app-section-description app-section-header__item">
+            <svg class="app-section-description__icon">
+              <use xlink:href="./img/sprite.svg#tank"></use>
+            </svg>
+            <div class="app-section-description__text">Любую услугу из можно подарить в виде сертификата. Отлично подойдет, когда вы точно знаете, что хотите подарить.</div>
+          </div>
         </div>
         <div equipment-slider="" class="swiper-container app-equipment__slider">
           <div class="swiper-wrapper app-equipment__wrapper">
@@ -706,8 +780,86 @@
       </div>
     </section>
     <script defer="" src="./js/equipment.slider.js"></script>
-
-    <section class="app-main__margin app-section">
+    <section page-navigation-anchor="obtaining" class="app-obtaining app-section app-main__margin">
+      <div class="wrapper">
+        <div class="app-section-title ">
+          <div class="app-section-title__text app-section-title__item">Способы получения сертификата</div>
+        </div>
+        <div class="app-section-header">
+          <div class="app-section-description app-section-header__item">
+            <svg class="app-section-description__icon">
+              <use xlink:href="./img/sprite.svg#curier"></use>
+            </svg>
+            <div class="app-section-description__text">У нас своя курьерская служба. Это позволяет обеспечивать быструю и своевременную доставку по Москве и области.</div>
+          </div>
+        </div>
+        <div obtaining-slider="" class="swiper-container app-obtaining__slider">
+          <div class="swiper-wrapper app-obtaining__wrapper">
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#shipped"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Стандартная доставка</div>
+              </div>
+              <div class="app-obtaining-slide-content"><b>250 ₽</b> в пределах МКАД.<br>С 9:00 до 21:00 без выходных.</div>
+              <div class="app-obtaining-slide-description">Вы можете заказать доставку в определенный интервал времени, например, с 11:00 до 12:00. Заказы на доставку в тот же день — до 17:00.</div>
+            </div>
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#fast-delivery"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Доставка за два часа</div>
+              </div>
+              <div class="app-obtaining-slide-content"><b>400 ₽</b> в пределах МКАД.<br>В течение двух часов с момента заказа.</div>
+              <div class="app-obtaining-slide-description">Заказы на срочную доставку принимаются до 17:00.</div>
+            </div>
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#fast-delivery"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Доставка за МКАД</div>
+              </div>
+              <div class="app-obtaining-slide-content"><b>От 450 ₽</b>, рассчитывается индивидуально.</div>
+              <div class="app-obtaining-slide-description">Доставка в другие города осуществляется экспресс-службой UPS или TNT по их расценкам.</div>
+            </div>
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#gift-delivery"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Доставка сразу получателю</div>
+              </div>
+              <div class="app-obtaining-slide-content">Оформить направленную передачу подарка непосредственно получателю можно оплатив подарок онлайн или оплатив дополнительную поездку курьера.</div>
+            </div>
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#email"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Электронный сертификат</div>
+              </div>
+              <div class="app-obtaining-slide-content">Мгновенная доставка на почту.</div>
+              <div class="app-obtaining-slide-description">При выборе электронного сертификата мы пришлем его на вашу электронную почту в тот же день мнгновенно. Это бесплатно.</div>
+            </div>
+            <div class="swiper-slide app-obtaining-slide">
+              <div class="app-obtaining-slide-header">
+                <svg class="app-obtaining-slide-header__icon">
+                  <use xlink:href="./img/sprite.svg#hotel"></use>
+                </svg>
+                <div class="app-obtaining-slide-header__title">Самовывоз</div>
+              </div>
+              <div class="app-obtaining-slide-content">Москва, Скаковая, д. 17, стр. 1, оф. 1000.</div>
+              <div class="app-obtaining-slide-description">Схема проезда и заказ бесплатной парковки на странице <a href="#" class="app-link app-link--primary">Контакты</a>. Мы открыты ежедневно с 9:00 до 21:00.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer="" src="./js/obtaining.slider.js"></script>
+    <section page-navigation-anchor="q-and-a" class="app-main__margin app-section">
       <div class="wrapper">
         <div class="app-section-title ">
           <div class="app-section-title__text app-section-title__item">Вопросы и ответы</div>
@@ -885,7 +1037,6 @@
         </div>
       </div>
     </section>
-
     <section class="app-banners app-main__margin">
       <div class="wrapper">
         <div class="app-banners__container">

@@ -13,5 +13,5 @@ $(function() {
       },
     },
   };
-  var intro = new Swiper('[companies-slider]', options);
+  var slider = new Swiper('[companies-slider]', options);
 });

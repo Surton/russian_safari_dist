@@ -26,5 +26,5 @@ $(function() {
       disabledClass: 'app-button-disabled',
     },
   };
-  var intro = new Swiper('[gift-baskets-slider]', options);
+  var slider = new Swiper('[gift-baskets-slider]', options);
 });

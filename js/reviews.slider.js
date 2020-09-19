@@ -31,5 +31,5 @@ $(function() {
       disabledClass: 'app-button-disabled',
     },
   };
-  var intro = new Swiper('[reviews-slider]', options);
+  var slider = new Swiper('[reviews-slider]', options);
 });
