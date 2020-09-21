@@ -2042,6 +2042,18 @@
 .app-input-radio-card-container .app-input[datepicker] {
   cursor: pointer;
 }
+.app-input-radio-card-container .app-input-container--left-icon .app-input {
+  padding-left: 30px;
+}
+.app-input-radio-card-container .app-input-container--right-icon .app-input {
+  padding-right: 30px;
+}
+.app-input-radio-card-container .app-input-icon--right {
+  right: 0;
+}
+.app-input-radio-card-container .app-input-icon--left {
+  left: 0;
+}
 .app-input-radio-cards {
   display: -ms-flexbox;
   display: flex;
