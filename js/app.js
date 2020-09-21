@@ -571,6 +571,10 @@ function initDatePicker() {
   try {
     for (_iterator7.s(); !(_step7 = _iterator7.n()).done; ) {
       var item = _step7.value;
+      $(item).on('click', function(e) {
+        return e.preventDefault();
+      }); // Отмена события для IE
+
       var min = item.getAttribute('min-date');
       var max = item.getAttribute('max-date');
       datepicker(item, {
