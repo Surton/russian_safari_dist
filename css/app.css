@@ -2824,7 +2824,7 @@
 }
 
 .app-certificate-form {
-  width: 400px !important;
+  width: 400px;
   padding: 0 !important;
   padding-top: 32px !important;
 }
@@ -2901,6 +2901,14 @@
 @media screen and (max-width: 767px) {
   .app-certificate-card__content {
     min-width: 0;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .app-certificate-form {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 }
 
@@ -3943,6 +3951,15 @@
   background-color: #ffffff;
   border-radius: 10px;
 }
+.app-product__container--535 {
+  padding-right: 535px;
+}
+.app-product__container--600 {
+  padding-right: 600px;
+}
+.app-product__container--780 {
+  padding-right: 780px;
+}
 .app-product__description {
   max-width: 100%;
 }
@@ -3954,6 +3971,13 @@
   .app-product-info {
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .app-product-info__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -3970,9 +3994,15 @@
 
 @media screen and (max-width: 1367px) {
   .app-product-form {
+    right: 10px;
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .app-product-form {
     position: relative;
     right: 0;
-    padding: 24px 16px;
   }
 }
 
@@ -4016,16 +4046,17 @@
   }
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1279px) {
   .app-product-preview {
     position: relative;
-    width: 100%;
+    width: 100% !important;
+    max-width: 400px;
     right: 0;
     margin-bottom: 32px !important;
   }
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (max-width: 1279px) {
   .app-product-preview img {
     height: auto;
     width: 100%;
@@ -4034,8 +4065,12 @@
 
 @media screen and (max-width: 1367px) {
   .app-product__container {
-    -ms-flex-align: center;
-    align-items: center;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .app-product__container {
     padding: 32px 40px !important;
   }
 }
@@ -4044,6 +4079,24 @@
   .app-product__container {
     padding: 24px 0 !important;
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .app-product__container--535 {
+    padding-right: 460px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .app-product__container--600 {
+    padding-right: 540px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .app-product__container--780 {
+    padding-right: 540px;
   }
 }
 
