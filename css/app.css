@@ -4207,7 +4207,7 @@
 }
 
 .app-header {
-  z-index: 1;
+  z-index: 2000;
   position: absolute;
   display: -ms-flexbox;
   display: flex;
@@ -4219,7 +4219,6 @@
   border-radius: 5px 5px 0 0;
 }
 .app-header.sticky {
-  z-index: 1100;
   position: fixed;
   left: 0;
 }
