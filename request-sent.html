@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Заявка отправлена</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -298,7 +312,11 @@
               <div class="app-certificate-card-info">
                 <div class="app-certificate-card-info__title">Сафари на БРДМ-2</div>
                 <div class="app-certificate-card-info__price">
-                  <div class="app-price ">
+                  <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                    <meta content="16 500 ₽" itemprop="lowPrice">
+                    <meta content="19 000 ₽" itemprop="highPrice">
+                    <meta itemprop="priceCurrency" content="RUB">
+                    <meta itemprop="availability" content="https://schema.org/InStock">
                     <div class="app-price__container">
                       <div class="app-price__current app-price__item">16 500 ₽</div>
 

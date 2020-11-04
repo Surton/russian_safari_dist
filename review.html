@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Отзыв о Русском сафари</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -279,29 +293,35 @@
       </div>
     </div>
   </header>
-  <main class="app-main">
+  <main itemprop="review" itemscope="" itemtype="http://schema.org/Review" class="app-main">
     <div class="app-page-header">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
+          <ul class="app-breadcrumbs-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Русское Сафари">
+                <span itemprop="name">Русское Сафари</span>
+                <meta itemprop="name" content="Русское Сафари">
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-          </div>
-          <div class="app-breadcrumbs__current">Отзыв о Русском сафари</div>
+          </ul>
+          <h1 itemprop="name" class="app-breadcrumbs__current">Отзыв о Русском сафари</h1>
         </div>
+        <span itemprop="author" style="display: none;">Николай</span>
+        <meta itemprop="datePublished" content="2018-12-08">
       </div>
     </div>
     <div class="app-main__margin app-article">
       <div class="wrapper">
         <div class="app-article__container">
           <div class="app-article__wrapper app-article__wrapper--1020">
-            <p class="p600">Несколько часов хорошего настроения обеспечены. Русское Сафари —<br> уникальная компания, в которой можно провести время на высшем<br> классе при полном комфорте в общении!</p>
+            <p itemprop="reviewBody" class="p600">Несколько часов хорошего настроения обеспечены. Русское Сафари —<br> уникальная компания, в которой можно провести время на высшем<br> классе при полном комфорте в общении!</p>
             <p class="app-article-media-container">
               <iframe resize="" src="https://player.vimeo.com/video/386681897?color=cc0605&byline=0" frameborder="0" allow="autoplay; fullscreen" class="app-article-media-container__media"></iframe>
             </p>
@@ -378,7 +398,11 @@
                   БТР-80
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -397,7 +421,11 @@
                   Танк Т-55
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -416,7 +444,11 @@
                   БМП-2
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -435,7 +467,11 @@
                   БРДМ-2
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 

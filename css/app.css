@@ -598,6 +598,9 @@
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
 }
 .app-breadcrumbs-crumbs__item {
   font-family: 'Open Sans';
@@ -626,6 +629,7 @@
   line-height: 64px;
   display: block;
   max-width: 100%;
+  margin: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1608,6 +1612,7 @@
   flex-grow: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  margin: 0;
   padding: 0 18px;
 }
 

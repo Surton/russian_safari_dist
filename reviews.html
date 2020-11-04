@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Отзывы</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -283,17 +297,21 @@
     <div class="app-page-header">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
+          <ul class="app-breadcrumbs-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Русское Сафари">
+                <span itemprop="name">Русское Сафари</span>
+                <meta itemprop="name" content="Русское Сафари">
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-          </div>
-          <div class="app-breadcrumbs__current">Отзывы</div>
+          </ul>
+          <h1 itemprop="name" class="app-breadcrumbs__current">Отзывы</h1>
         </div>
       </div>
     </div>
@@ -337,7 +355,8 @@
             </div>
           </div>
           <div class="app-card-list-main app-card-list__item">
-            <a href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -346,12 +365,14 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Американские друзья</div>
+                <div itemprop="author" class="app-review-card__title">Американские друзья</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">24 декабря 2018</div>
-                <div class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-3.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -360,32 +381,38 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Сергей</div>
+                <div itemprop="author" class="app-review-card__title">Сергей</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">1 апреля 2019</div>
-                <div class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Владислав</div>
+                <div itemprop="author" class="app-review-card__title">Владислав</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">32 сентября 2019</div>
-                <div class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Владислав</div>
+                <div itemprop="author" class="app-review-card__title">Владислав</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">32 сентября 2019</div>
-                <div class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -394,22 +421,26 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Американские друзья</div>
+                <div itemprop="author" class="app-review-card__title">Американские друзья</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">24 декабря 2018</div>
-                <div class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-2.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Роман</div>
+                <div itemprop="author" class="app-review-card__title">Роман</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">19 июня 2019</div>
-                <div class="app-review-card__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -418,22 +449,26 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Американские друзья</div>
+                <div itemprop="author" class="app-review-card__title">Американские друзья</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">24 декабря 2018</div>
-                <div class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item app-review-card--wide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Владислав</div>
+                <div itemprop="author" class="app-review-card__title">Владислав</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">32 сентября 2019</div>
-                <div class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
               </div>
             </a>
-            <a href="#" class="app-review-card app-card app-card-list-main__item">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card app-card-list-main__item">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-3.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -442,9 +477,10 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Сергей</div>
+                <div itemprop="author" class="app-review-card__title">Сергей</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">1 апреля 2019</div>
-                <div class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
               </div>
             </a>
           </div>

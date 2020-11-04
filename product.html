@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Сафари на БРДМ-2</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -279,32 +293,42 @@
       </div>
     </div>
   </header>
-  <main class="app-main">
+  <meta itemprop="name" content="Сафари на БРДМ-2">
+  <main itemscope="" itemtype="http://schema.org/Product" class="app-main">
     <div class="app-page-header app-page-header--image" style="background-image: url(img/covers/cover-3.jpg)">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
+          <ul class="app-breadcrumbs-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Русское Сафари">
+                <span itemprop="name">Русское Сафари</span>
+                <meta itemprop="name" content="Русское Сафари">
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Наша техника</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Наша техника">
+                <span itemprop="name">Наша техника</span>
+                <meta itemprop="name" content="Наша техника">
+              </a>
+              <meta itemprop="position" content="2">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-          </div>
-          <div class="app-breadcrumbs__current">Сафари на БРДМ-2</div>
+          </ul>
+          <h1 itemprop="name" class="app-breadcrumbs__current">Сафари на БРДМ-2</h1>
         </div>
         <div class="app-page-header__separator"></div>
       </div>
     </div>
+    <img src="img/covers/cover-3.jpg" itemprop="image" alt="Сафари на БРДМ-2" style="display: none">
     <section sticky="" data-id="page-navigation" class="app-page-navigation">
       <div class="app-page-navigation__container wrapper">
         <nav class="app-page-navigation__nav">
@@ -315,7 +339,11 @@
           <a page-navigation="q-and-a" class="app-page-navigation__item">Вопросы и ответы</a>
         </nav>
         <div class="app-product-price">
-          <div class="app-price app-product-price__item h500">
+          <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price app-product-price__item h500">
+            <meta content="16 500 ₽" itemprop="lowPrice">
+            <meta content="" itemprop="highPrice">
+            <meta itemprop="priceCurrency" content="RUB">
+            <meta itemprop="availability" content="https://schema.org/InStock">
             <div class="app-price__container">
               <div class="app-price__current app-price__item">16 500 ₽</div>
             </div>
@@ -330,10 +358,15 @@
     <section class="app-main__margin app-product">
       <div class="wrapper wrapper--no-mobile-margin">
         <div page-navigation-anchor="description" class="app-product__container app-product__container--535">
-          <div class="app-product__description app-product__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</div>
+          <div itemprop="description" class="app-product__description app-product__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, легко и эффектно преодолевает участки сложного бездорожья, славится способностью забираться в такие места, где даже внедорожник засядет по самую крышу.</div>
+          <meta itemprop="model" content="БРДМ-2">
           <form product-section-form="" class="app-form app-form--card app-product-form app-product__item">
             <div class="app-form-row">
-              <div class="app-price h900">
+              <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price h900">
+                <meta content="16 500 ₽" itemprop="lowPrice">
+                <meta content="19 000 ₽" itemprop="highPrice">
+                <meta itemprop="priceCurrency" content="RUB">
+                <meta itemprop="availability" content="https://schema.org/InStock">
                 <div class="app-price__container">
                   <div class="app-price__current app-price__item">16 500 ₽</div>
 
@@ -1089,7 +1122,8 @@
         <div reviews-slider="" class="swiper-container app-reviews__slider">
           <div class="swiper-wrapper app-reviews__wrapper">
 
-            <a href="#" class="app-review-card app-card swiper-slide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card swiper-slide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-1.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -1098,24 +1132,28 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Американские друзья</div>
+                <div itemprop="author" class="app-review-card__title">Американские друзья</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">24 декабря 2018</div>
-                <div class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Отдых в хорошей компании — лучший отдых! Душевно, ребята, душевно и очень круто!</div>
               </div>
             </a>
 
-            <a href="#" class="app-review-card app-card swiper-slide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card swiper-slide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-2.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Роман</div>
+                <div itemprop="author" class="app-review-card__title">Роман</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">19 июня 2019</div>
-                <div class="app-review-card__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Мне очень нравится, когда я был в американской армии, я был в танке был только один раз, но сейчас это второй раз! И это очень хорошо!</div>
               </div>
             </a>
 
-            <a href="#" class="app-review-card app-card swiper-slide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card swiper-slide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-3.jpg')">
                 <div class="app-review-card-image__offset"></div>
 
@@ -1124,20 +1162,23 @@
                 </svg>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Сергей</div>
+                <div itemprop="author" class="app-review-card__title">Сергей</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">1 апреля 2019</div>
-                <div class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Свежий воздух, настоящее русское поле и все это — в кругу друзей! Потрясающе, что еще сказать.</div>
               </div>
             </a>
 
-            <a href="#" class="app-review-card app-card swiper-slide">
+            <a itemprop="review" itemscope="" itemtype="http://schema.org/Review" href="#" class="app-review-card app-card swiper-slide">
+              <meta itemprop="name" content="Отзывы Валентина и Дарьи о Русском Сафари">
               <div class="app-review-card-image" style="background-image: url('img/mocks/reviews/reviews-4.jpg')">
                 <div class="app-review-card-image__offset"></div>
               </div>
               <div class="app-review-card__content">
-                <div class="app-review-card__title">Владислав</div>
+                <div itemprop="author" class="app-review-card__title">Владислав</div>
+                <meta itemprop="datePublished" content="2018-12-08">
                 <div class="app-review-card__date">30 сентября 2019</div>
-                <div class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
+                <div itemprop="reviewBody" class="app-review-card__review">Крутая поездка, нам все очень понравилось! От Вашей организации остались только положительные впечатления!!! Жаль что нельзя стрелять без остановки выстрелов...</div>
               </div>
             </a>
 
@@ -1153,14 +1194,14 @@
         </div>
         <div class="app-accordion-container">
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</div>
+              <h3 itemprop="name" class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1173,22 +1214,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Как можно оплатить покупку подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Как можно оплатить покупку подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1201,22 +1242,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Какой срок действия подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Какой срок действия подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1229,22 +1270,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</div>
+              <h3 itemprop="name" class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1257,22 +1298,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</div>
+              <h3 itemprop="name" class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1285,22 +1326,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Где это происходит территориально?</div>
+              <h3 itemprop="name" class="app-accordion__title">Где это происходит территориально?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -1313,8 +1354,8 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
@@ -1366,7 +1407,11 @@
                     <div class="app-gift-baskets-slide__title">
                       Набор «Командир»
                     </div>
-                    <div class="app-price ">
+                    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                      <meta content="16 600 ₽" itemprop="lowPrice">
+                      <meta content="17 900 ₽" itemprop="highPrice">
+                      <meta itemprop="priceCurrency" content="RUB">
+                      <meta itemprop="availability" content="https://schema.org/InStock">
                       <div class="app-price__container">
                         <div class="app-price__current app-price__item">16 600 ₽</div>
 
@@ -1398,7 +1443,11 @@
                     <div class="app-gift-baskets-slide__title">
                       Набор «Генерал»
                     </div>
-                    <div class="app-price ">
+                    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                      <meta content="33 200 ₽" itemprop="lowPrice">
+                      <meta content="35 900 ₽" itemprop="highPrice">
+                      <meta itemprop="priceCurrency" content="RUB">
+                      <meta itemprop="availability" content="https://schema.org/InStock">
                       <div class="app-price__container">
                         <div class="app-price__current app-price__item">33 200 ₽</div>
 
@@ -1434,7 +1483,11 @@
                     <div class="app-gift-baskets-slide__title">
                       Набор «Маршал»
                     </div>
-                    <div class="app-price ">
+                    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                      <meta content="44 200 ₽" itemprop="lowPrice">
+                      <meta content="46 900 ₽" itemprop="highPrice">
+                      <meta itemprop="priceCurrency" content="RUB">
+                      <meta itemprop="availability" content="https://schema.org/InStock">
                       <div class="app-price__container">
                         <div class="app-price__current app-price__item">44 200 ₽</div>
 
@@ -1526,7 +1579,11 @@
                   БТР-80
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -1545,7 +1602,11 @@
                   Танк Т-55
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -1564,7 +1625,11 @@
                   БМП-2
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -1583,7 +1648,11 @@
                   БРДМ-2
                 </div>
                 <div class="app-equipment-slide__separator"></div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 950 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 

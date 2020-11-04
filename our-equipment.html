@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Наша техника</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -279,37 +293,48 @@
       </div>
     </div>
   </header>
-  <main class="app-main">
+  <main itemscope="" itemtype="//schema.org/AggregateOffer" class="app-main">
     <div class="app-page-header app-page-header--image" style="background-image: url(img/covers/cover-2.jpg)">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
+          <ul class="app-breadcrumbs-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Русское Сафари">
+                <span itemprop="name">Русское Сафари</span>
+                <meta itemprop="name" content="Русское Сафари">
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-          </div>
-          <div class="app-breadcrumbs__current">Наша техника</div>
+          </ul>
+          <h1 itemprop="name" class="app-breadcrumbs__current">Наша техника</h1>
         </div>
+        <meta content="2090" itemprop="offerCount"> <!-- количество карточек в разделе -->
+        <meta content="3380" itemprop="lowPrice"> <!-- минимальная цена -->
+        <meta content="55500" itemprop="highPrice"> <!-- максимальная цена -->
+        <meta content="RUB" itemprop="priceCurrency"> <!-- валюта -->
         <div class="app-page-header__separator"></div>
       </div>
     </div>
     <div class="wrapper wrapper--no-mobile-margin">
-      <div class="app-equipment-card app-card app-main__margin">
+      <div itemscope="" itemtype="http://schema.org/Product" class="app-equipment-card app-card app-main__margin">
         <div class="app-equipment-card-preview">
+          <img src="img/mocks/equipments/equipment.jpg" itemprop="image" alt="Сафари на БТР-80" style="display: none">
           <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment.jpg')">
             <div class="app-equipment-card__badge app-badge">Самый быстрый</div>
           </div>
           <div class="app-equipment-card-preview__main">
             <div class="app-equipment-card-header">
-              <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БТР-80</span>
+              <span itemprop="name" class="app-equipment-card__title app-equipment-card-header__item">Сафари на БТР-80</span>
               <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый быстрый</div>
             </div>
-            <div class="app-equipment-card-preview__description app-equipment-card-preview__item">БТР – 80 – мощная военная машина, которая стоит на вооружении российской армии. Познакомиться поближе с такой техникой захочет любой мужчина</div>
+            <div itemprop="description" class="app-equipment-card-preview__description app-equipment-card-preview__item">БТР – 80 – мощная военная машина, которая стоит на вооружении российской армии. Познакомиться поближе с такой техникой захочет любой мужчина</div>
+            <meta itemprop="model" content="Сафари на БТР-80">
+            <meta itemprop="availability" content="https://schema.org/InStock">
           </div>
         </div>
         <div class="app-equipment-card__content">
@@ -434,7 +459,11 @@
             <div class="app-equipment-card-price">
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -444,7 +473,11 @@
               </div>
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="48 000 ₽" itemprop="lowPrice">
+                  <meta content="57 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">48 000 ₽</div>
 
@@ -462,17 +495,20 @@
         </div>
 
       </div>
-      <div class="app-equipment-card app-card app-main__margin">
+      <div itemscope="" itemtype="http://schema.org/Product" class="app-equipment-card app-card app-main__margin">
         <div class="app-equipment-card-preview">
+          <img src="img/mocks/equipments/equipment-1.jpg" itemprop="image" alt="Сафари на танке Т-55" style="display: none">
           <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-1.jpg')">
             <div class="app-equipment-card__badge app-badge">Самый мощный</div>
           </div>
           <div class="app-equipment-card-preview__main">
             <div class="app-equipment-card-header">
-              <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на танке Т-55</span>
+              <span itemprop="name" class="app-equipment-card__title app-equipment-card-header__item">Сафари на танке Т-55</span>
               <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый мощный</div>
             </div>
-            <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Грохот боевого танка весом в 40 тонн, трескающаяся под гусеницами земля… Это действительно впечатляющий подарок! О поездке на танке наверняка мечтали многие</div>
+            <div itemprop="description" class="app-equipment-card-preview__description app-equipment-card-preview__item">Грохот боевого танка весом в 40 тонн, трескающаяся под гусеницами земля… Это действительно впечатляющий подарок! О поездке на танке наверняка мечтали многие</div>
+            <meta itemprop="model" content="Сафари на танке Т-55">
+            <meta itemprop="availability" content="https://schema.org/InStock">
           </div>
         </div>
         <div class="app-equipment-card__content">
@@ -597,7 +633,11 @@
             <div class="app-equipment-card-price">
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="16 600 ₽" itemprop="lowPrice">
+                  <meta content="" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">16 600 ₽</div>
                   </div>
@@ -605,7 +645,11 @@
               </div>
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="85 000 ₽" itemprop="lowPrice">
+                  <meta content="98 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">85 000 ₽</div>
 
@@ -623,17 +667,20 @@
         </div>
 
       </div>
-      <div class="app-equipment-card app-card app-main__margin">
+      <div itemscope="" itemtype="http://schema.org/Product" class="app-equipment-card app-card app-main__margin">
         <div class="app-equipment-card-preview">
+          <img src="img/mocks/equipments/equipment-3.jpg" itemprop="image" alt="Сафари на БМП-2" style="display: none">
           <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-3.jpg')">
             <div class="app-equipment-card__badge app-badge">Самый драйвовый</div>
           </div>
           <div class="app-equipment-card-preview__main">
             <div class="app-equipment-card-header">
-              <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БМП-2</span>
+              <span itemprop="name" class="app-equipment-card__title app-equipment-card-header__item">Сафари на БМП-2</span>
               <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый драйвовый</div>
             </div>
-            <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Катание на БМП-2 от компании «Русское сафари» – отличная возможность прочувствовать море адреналина</div>
+            <div itemprop="description" class="app-equipment-card-preview__description app-equipment-card-preview__item">Катание на БМП-2 от компании «Русское сафари» – отличная возможность прочувствовать море адреналина</div>
+            <meta itemprop="model" content="Сафари на БМП-2">
+            <meta itemprop="availability" content="https://schema.org/InStock">
           </div>
         </div>
         <div class="app-equipment-card__content">
@@ -758,7 +805,11 @@
             <div class="app-equipment-card-price">
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -768,7 +819,11 @@
               </div>
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="48 000 ₽" itemprop="lowPrice">
+                  <meta content="57 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">48 000 ₽</div>
 
@@ -786,17 +841,20 @@
         </div>
 
       </div>
-      <div class="app-equipment-card app-card app-main__margin">
+      <div itemscope="" itemtype="http://schema.org/Product" class="app-equipment-card app-card app-main__margin">
         <div class="app-equipment-card-preview">
+          <img src="img/mocks/equipments/equipment-4.jpg" itemprop="image" alt="Сафари на БРДМ-2" style="display: none">
           <div class="app-equipment-card-preview__image app-equipment-card-preview__item" style="background-image: url('img/mocks/equipments/equipment-4.jpg')">
             <div class="app-equipment-card__badge app-badge">Самый комфортный</div>
           </div>
           <div class="app-equipment-card-preview__main">
             <div class="app-equipment-card-header">
-              <span class="app-equipment-card__title app-equipment-card-header__item">Сафари на БРДМ-2</span>
+              <span itemprop="name" class="app-equipment-card__title app-equipment-card-header__item">Сафари на БРДМ-2</span>
               <div class="app-equipment-card__badge app-equipment-card-header__item app-badge">Самый комфортный</div>
             </div>
-            <div class="app-equipment-card-preview__description app-equipment-card-preview__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, славится способностью забираться в такие места, где ты на свой девяточке сядешь по самую крышу</div>
+            <div itemprop="description" class="app-equipment-card-preview__description app-equipment-card-preview__item">Бронированная разведывательно-дозорная машина — это семи-тонный военный супер-внедорожник, славится способностью забираться в такие места, где ты на свой девяточке сядешь по самую крышу</div>
+            <meta itemprop="model" content="Сафари на БРДМ-2">
+            <meta itemprop="availability" content="https://schema.org/InStock">
           </div>
         </div>
         <div class="app-equipment-card__content">
@@ -921,7 +979,11 @@
             <div class="app-equipment-card-price">
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Стоимость за человека в группе</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="9 500 ₽" itemprop="lowPrice">
+                  <meta content="11 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">9 500 ₽</div>
 
@@ -931,7 +993,11 @@
               </div>
               <div class="app-equipment-card-price__item">
                 <div class="app-equipment-card-price__title">Индивидуальный тур (до 6 человек)</div>
-                <div class="app-price ">
+                <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" class="app-price ">
+                  <meta content="48 000 ₽" itemprop="lowPrice">
+                  <meta content="57 000 ₽" itemprop="highPrice">
+                  <meta itemprop="priceCurrency" content="RUB">
+                  <meta itemprop="availability" content="https://schema.org/InStock">
                   <div class="app-price__container">
                     <div class="app-price__current app-price__item">48 000 ₽</div>
 

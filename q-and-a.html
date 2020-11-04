@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#">
 
 <head>
   <title>Вопросы и ответы</title>
@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/app.css">
   <script defer="" src="./js/libs.min.js"></script>
+  <!--BEGIN Open Graph-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Дублирует основной title">
+  <meta property="og:url" content="Указывать абсолютный путь страницы">
+  <meta property="og:image" content="Указываем абсолютный путь ЛОГО">
+  <meta property="og:description" content="Дублируем основной description">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="og:site_name" content="«Русское Сафари» — катание на танках и бронетранспортерах">
+  <meta property="og:locality" content="деревня Кочугино">
+  <meta property="og:region" content="Московская область">
+  <meta property="og:country-name" content="Россия">
+  <meta name="title" content="Дублирует H1 страницы">
+  <!--END Open Graph-->
+
 
 </head>
 
@@ -279,21 +293,25 @@
       </div>
     </div>
   </header>
-  <main class="app-main">
+  <main itemscope="" itemtype="https://schema.org/FAQPage" class="app-main">
     <div class="app-page-header">
       <div class="app-page-header__container wrapper">
         <div class="app-breadcrumbs">
-          <div class="app-breadcrumbs-crumbs">
+          <ul class="app-breadcrumbs-crumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-            <div class="app-breadcrumbs-crumbs__item">
-              <a href="#">Русское Сафари</a>
-            </div>
+            <li class="app-breadcrumbs-crumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="#" title="Русское Сафари">
+                <span itemprop="name">Русское Сафари</span>
+                <meta itemprop="name" content="Русское Сафари">
+              </a>
+              <meta itemprop="position" content="1">
+            </li>
             <svg class="app-breadcrumbs-crumbs__icon">
               <use xlink:href="./img/sprite.svg#arrow-forward"></use>
             </svg>
 
-          </div>
-          <div class="app-breadcrumbs__current">Вопросы и ответы</div>
+          </ul>
+          <h1 itemprop="name" class="app-breadcrumbs__current">Вопросы и ответы</h1>
         </div>
       </div>
     </div>
@@ -305,14 +323,14 @@
         </div>
         <div class="app-accordion-container">
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</div>
+              <h3 itemprop="name" class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -325,22 +343,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Как можно оплатить покупку подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Как можно оплатить покупку подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -353,22 +371,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Какой срок действия подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Какой срок действия подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -381,22 +399,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</div>
+              <h3 itemprop="name" class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -409,22 +427,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</div>
+              <h3 itemprop="name" class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -437,22 +455,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Где это происходит территориально?</div>
+              <h3 itemprop="name" class="app-accordion__title">Где это происходит территориально?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -465,8 +483,8 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
@@ -484,14 +502,14 @@
         </div>
         <div class="app-accordion-container">
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</div>
+              <h3 itemprop="name" class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -504,22 +522,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Как можно оплатить покупку подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Как можно оплатить покупку подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -532,22 +550,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Какой срок действия подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Какой срок действия подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -560,22 +578,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</div>
+              <h3 itemprop="name" class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -588,8 +606,8 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
@@ -607,14 +625,14 @@
         </div>
         <div class="app-accordion-container">
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</div>
+              <h3 itemprop="name" class="app-accordion__title">Детей с какого возраста можно брать с собой на катание?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -627,22 +645,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</div>
+              <h3 itemprop="name" class="app-accordion__title">Я хочу подарить сертификат на несколько услуг. Это возможно?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -655,22 +673,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Как можно оплатить покупку подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Как можно оплатить покупку подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -683,22 +701,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Где это происходит территориально?</div>
+              <h3 itemprop="name" class="app-accordion__title">Где это происходит территориально?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -711,22 +729,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Какой срок действия подарка?</div>
+              <h3 itemprop="name" class="app-accordion__title">Какой срок действия подарка?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -739,22 +757,22 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div accordion="" class="app-accordion">
+          <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" accordion="" class="app-accordion">
             <div accordion-header="" class="app-accordion__header">
               <div class="app-accordion__icon">
                 <svg style="fill: #969994">
                   <use xlink:href="./img/sprite.svg#help"></use>
                 </svg>
               </div>
-              <div class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</div>
+              <h3 itemprop="name" class="app-accordion__title">Если имениннику исполняется 17 лет, дадут ему управлять?</h3>
               <div class="app-accordion-state app-accordion__icon">
                 <svg class="app-accordion-state__open">
                   <use xlink:href="./img/sprite.svg#add-circle"></use>
@@ -767,8 +785,8 @@
             <div accordion-main="" class="app-accordion-main">
               <div class="app-article app-accordion-main__article">
                 <div class="app-article__container">
-                  <div class="app-article__wrapper">
-                    <p class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
+                  <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="app-article__wrapper">
+                    <p itemprop="text" class="p400">Поездка доставит массу впечатлений, будет интересна и брутальным мужчинам, и на<br> «ты» с экстримом. Для тех, кто служил в армии, но не успел освоить военную технику,<br> эта поездка повод еще раз потренироваться в управлении машиной. Кто не проходил<br> срочную службу, мы воссоздадим эти эмоции с максимальной реалистичностью.</p>
                   </div>
                 </div>
               </div>
